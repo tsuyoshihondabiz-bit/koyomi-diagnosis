@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: '暦占術 | 星座×数秘で導く108タイプの恋愛診断',
     description:
       '暦占術師・暦（こよみ）が西洋占星術×数秘術で導く108タイプの恋愛診断。無料で鑑定。',
-    images: [`${siteUrl}/ogp-default.jpg`],
+    images: [`${siteUrl}/images/banner.png`],
     type: 'website',
     locale: 'ja_JP',
   },

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FORTUNE_TELLER } from '@/data/lp-content';
 
 export default function FortunetellerProfile() {
@@ -23,16 +24,20 @@ export default function FortunetellerProfile() {
         </div>
 
         <div className="text-center mb-10">
-          {/* Avatar with ornate frame */}
+          {/* Avatar with ornate frame and real photo */}
           <div className="profile-frame inline-block mb-8">
-            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-2 border-gold/40 flex items-center justify-center"
+            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-2 border-gold/40 overflow-hidden"
                  style={{
-                   background: 'linear-gradient(135deg, rgba(14,18,50,0.9), rgba(30,28,60,0.9))',
-                   boxShadow: '0 0 40px rgba(201,168,76,0.15), inset 0 0 30px rgba(201,168,76,0.05)',
+                   boxShadow: '0 0 40px rgba(201,168,76,0.2), 0 0 80px rgba(201,168,76,0.08)',
                  }}>
-              <span className="font-serif text-gradient-gold text-3xl sm:text-4xl font-bold">
-                {FORTUNE_TELLER.name}
-              </span>
+              <Image
+                src="/images/profile.png"
+                alt={`${FORTUNE_TELLER.title} ${FORTUNE_TELLER.name}`}
+                width={160}
+                height={160}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
           </div>
 
