@@ -79,10 +79,28 @@ export default function HeroSection() {
         </button>
 
         {/* Limited time notice */}
-        <p className="text-gold-dim/50 text-xs mb-4">※期間限定・お一人様1回限り</p>
+        <p className="text-gold-dim/50 text-xs mb-6">※期間限定・お一人様1回限り</p>
+
+        {/* Achievement stats */}
+        <div className="flex items-center justify-center gap-6 sm:gap-10 mb-6">
+          <div className="text-center">
+            <p className="font-serif text-gradient-gold text-2xl sm:text-3xl font-bold leading-none">30,000<span className="text-sm sm:text-base">件</span><span className="text-gold/60 text-xs">+</span></p>
+            <p className="text-text-dim/50 text-[10px] sm:text-xs mt-1 tracking-wider">鑑定実績</p>
+          </div>
+          <div className="w-px h-10 bg-gold/15" />
+          <div className="text-center">
+            <p className="font-serif text-gradient-gold text-2xl sm:text-3xl font-bold leading-none">98.2<span className="text-sm sm:text-base">%</span></p>
+            <p className="text-text-dim/50 text-[10px] sm:text-xs mt-1 tracking-wider">満足度</p>
+          </div>
+          <div className="w-px h-10 bg-gold/15" />
+          <div className="text-center">
+            <p className="font-serif text-gradient-gold text-2xl sm:text-3xl font-bold leading-none">108<span className="text-sm sm:text-base">通り</span></p>
+            <p className="text-text-dim/50 text-[10px] sm:text-xs mt-1 tracking-wider">診断タイプ</p>
+          </div>
+        </div>
 
         {/* Trust badge */}
-        <div className="flex items-center justify-center gap-4 mt-4">
+        <div className="flex items-center justify-center gap-4">
           {['完全無料', '30秒で鑑定', '登録不要'].map((badge, i) => (
             <span
               key={i}
@@ -171,7 +189,7 @@ export default function HeroSection() {
               {/* Bio text */}
               <div className="mb-5">
                 <p className="text-text/60 text-xs sm:text-sm leading-[2]">
-                  代々続く占師一家に生まれ、幼少期より占の動きと数字の持つ波動を感に感じ、西洋占星術の護符です。新時代から伝わる秘法と鑑定を合わせ、何代人の伝人に寄り添う「暦占術」を示し、これまで1万人以上の運命を鑑定させてきました。
+                  代々続く占師の家系に生まれ、幼少期より星の動きと数字の持つ波動を敏感に感じ取る。西洋占星術と数秘術を20年以上にわたり研究し、古来から伝わる秘法と現代の鑑定技法を融合。一人ひとりの運命に寄り添う「暦占術」を確立し、これまで1万人以上の運命を鑑定してきました。
                 </p>
               </div>
 

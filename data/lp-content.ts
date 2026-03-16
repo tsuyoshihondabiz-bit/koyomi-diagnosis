@@ -77,7 +77,7 @@ export const TESTIMONIALS = [
 export const FORTUNE_TELLER = {
   name: '暦',
   nameReading: 'こよみ',
-  title: '暦占術師',
+  title: '星命鑑定師',
   methodName: '暦占術',
   methodReading: 'こよみせんじゅつ',
   bio: [
