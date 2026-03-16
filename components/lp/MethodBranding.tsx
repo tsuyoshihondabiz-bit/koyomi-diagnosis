@@ -11,8 +11,12 @@ export default function MethodBranding() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
+        {/* METHOD label */}
+        <div className="text-center mb-3">
+          <span className="text-gold-dim/60 text-[10px] tracking-[0.5em] uppercase">Method</span>
+        </div>
         <SectionHeading
-          title="暦占術とは"
+          title="的中率の秘密"
           subtitle="About Koyomi Fortune Method"
         />
 

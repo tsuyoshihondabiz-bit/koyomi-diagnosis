@@ -29,9 +29,10 @@ export default function FortunetellerProfile() {
           <div className="text-center">
             {/* Avatar with ornate frame */}
             <div className="profile-frame inline-block mb-6">
-              <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-2 border-gold/40 overflow-hidden"
+              <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-[3px] border-gold/50 overflow-hidden"
                    style={{
-                     boxShadow: '0 0 40px rgba(201,168,76,0.2), 0 0 80px rgba(201,168,76,0.08)',
+                     boxShadow: '0 0 40px rgba(201,168,76,0.25), 0 0 80px rgba(201,168,76,0.1), inset 0 0 20px rgba(201,168,76,0.05)',
+                     background: 'linear-gradient(145deg, rgba(245,240,224,0.1), rgba(201,168,76,0.05))',
                    }}>
                 <Image
                   src="/images/profile.png"
