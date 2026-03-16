@@ -335,6 +335,19 @@ body {
 }
 
 /* ══════════════════════════════════════
+   HERO GRADIENT (Stitch参考: ピンク/パープル→クリーム)
+   ══════════════════════════════════════ */
+
+.bg-hero-gradient {
+  background:
+    radial-gradient(ellipse at 30% 10%, rgba(200,160,200,0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 5%, rgba(180,150,200,0.15) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 25%, rgba(240,210,160,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 15%, rgba(200,170,130,0.08) 0%, transparent 40%),
+    linear-gradient(180deg, #F0E4D8 0%, #F5EDE0 15%, #FBF7F0 40%, #FBF7F0 100%);
+}
+
+/* ══════════════════════════════════════
    CELESTIAL BACKGROUNDS (Light Mode)
    ══════════════════════════════════════ */
 

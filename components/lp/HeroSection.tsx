@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import DiagnosisForm from '@/components/DiagnosisForm';
 import LoadingScreen from '@/components/LoadingScreen';
 import CelestialBackground from './CelestialBackground';
+import { FORTUNE_TELLER } from '@/data/lp-content';
 import { getZodiac } from '@/lib/zodiac';
 import { getNumerologyNumber } from '@/lib/numerology';
 
@@ -29,98 +31,73 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative overflow-hidden min-h-[100svh] flex items-center bg-celestial-1">
+    <section className="relative overflow-hidden bg-hero-gradient">
       {/* Star field */}
-      <CelestialBackground count={80} />
+      <CelestialBackground count={60} />
 
-      {/* Decorative zodiac ring - top right */}
+      {/* Decorative moon - top right */}
       <div
-        className="absolute -top-20 -right-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full border border-gold/10 opacity-30 pointer-events-none"
-        aria-hidden="true"
-        style={{ animation: 'gentleRotate 60s linear infinite' }}
-      >
-        <div className="absolute inset-4 rounded-full border border-dashed border-gold/10" />
-        <div className="absolute top-1/2 left-0 w-2 h-2 rounded-full bg-gold/20 -translate-y-1/2" />
-        <div className="absolute top-0 left-1/2 w-2 h-2 rounded-full bg-gold/15 -translate-x-1/2" />
-      </div>
-
-      {/* Decorative moon - bottom left */}
-      <div
-        className="absolute bottom-[10%] left-[5%] text-[80px] sm:text-[120px] text-gold/10 pointer-events-none select-none"
+        className="absolute top-[8%] right-[8%] text-[60px] sm:text-[80px] text-gold/15 pointer-events-none select-none"
         aria-hidden="true"
         style={{ animation: 'moonFloat 8s ease-in-out infinite' }}
       >
         ☽
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-16 items-center">
-          {/* Left: Branding & copy */}
-          <div className="order-2 lg:order-1 text-center lg:text-left">
-            {/* Sparkle badge */}
-            <div className="inline-flex items-center gap-2 mb-6">
-              <span className="sparkle-star text-xs">✦</span>
-              <span className="text-gold-dim text-[10px] tracking-[0.4em] uppercase border border-gold/20 rounded-full px-4 py-1.5">
-                Koyomi Fortune Method
-              </span>
-              <span className="sparkle-star text-xs" style={{ animationDelay: '1s' }}>✦</span>
-            </div>
+      {/* Decorative zodiac ring */}
+      <div
+        className="absolute -top-20 -right-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full border border-gold/8 opacity-30 pointer-events-none"
+        aria-hidden="true"
+        style={{ animation: 'gentleRotate 60s linear infinite' }}
+      >
+        <div className="absolute inset-4 rounded-full border border-dashed border-gold/8" />
+      </div>
 
-            {/* Main title - large ornate */}
-            <h1 className="font-serif font-bold leading-[1.2] mb-6">
-              <span className="block text-gradient-gold text-[2.8rem] sm:text-[3.6rem] lg:text-[4.2rem]">
-                暦占術
-              </span>
-              <span className="block text-text/60 text-lg sm:text-xl mt-1 font-normal tracking-wider">
-                星座×数秘で導く、あなただけの
-              </span>
-              <span className="block mt-1">
-                <span className="text-gradient-gold text-3xl sm:text-4xl">108</span>
-                <span className="text-text/60 text-lg sm:text-xl font-normal">通りの恋愛パターン</span>
-              </span>
-            </h1>
+      {/* ═══ TOP: Centered Branding ═══ */}
+      <div className="relative z-10 pt-20 sm:pt-24 pb-6 text-center">
+        {/* Subtitle with ornamental dashes */}
+        <p className="text-gold-dim/70 text-xs sm:text-sm tracking-[0.3em] mb-4">
+          ── 運命を精解く、古の知恵 ──
+        </p>
 
-            {/* Ornamental divider */}
-            <div className="ornament-divider max-w-xs mx-auto lg:mx-0 mb-6">
-              <span className="text-gold/30 text-[8px]">✧</span>
-            </div>
+        {/* Main title */}
+        <h1 className="font-serif text-gradient-gold text-[3rem] sm:text-[4rem] lg:text-[4.8rem] font-bold leading-none mb-4">
+          暦占術
+        </h1>
 
-            {/* Description */}
-            <p className="text-text/50 text-sm leading-[2] mb-8 max-w-md mx-auto lg:mx-0">
-              暦占術師・暦（こよみ）が、西洋占星術の12星座と<br className="hidden sm:inline" />
-              古代ギリシャ数秘術を独自に融合。<br className="hidden sm:inline" />
-              あなたの恋愛パターン・相性・運命のパートナーを鑑定します。
-            </p>
+        {/* Tagline */}
+        <p className="text-text/50 text-sm sm:text-base tracking-wider mb-8">
+          星座 × 数秘で導く 108タイプの恋愛診断
+        </p>
 
-            {/* Trust badges */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-6">
-              {['完全無料', '30秒で鑑定', '登録不要'].map((badge, i) => (
-                <span
-                  key={i}
-                  className="flex items-center gap-2 text-xs text-gold-dim border border-gold/15 rounded-full px-4 py-2 bg-white/50"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40" />
-                  {badge}
-                </span>
-              ))}
-            </div>
+        {/* CTA button */}
+        <button
+          onClick={() => document.getElementById('diagnosis-form')?.scrollIntoView({ behavior: 'smooth' })}
+          className="btn-gold px-12 py-4 text-base sm:text-lg cursor-pointer mb-4"
+        >
+          無料で占う
+        </button>
 
-            {/* Social proof */}
-            <div className="flex items-center justify-center lg:justify-start gap-3 mt-4">
-              <span className="w-12 h-px bg-gradient-to-r from-transparent to-gold/20" />
-              <p className="text-text-dim/60 text-xs tracking-wider">
-                累計鑑定者数
-                <span className="text-gold mx-1 font-bold text-sm">50,000</span>
-                人突破
-              </p>
-              <span className="w-12 h-px bg-gradient-to-l from-transparent to-gold/20" />
-            </div>
-          </div>
+        {/* Trust badge */}
+        <div className="flex items-center justify-center gap-4 mt-4">
+          {['完全無料', '30秒で鑑定', '登録不要'].map((badge, i) => (
+            <span
+              key={i}
+              className="flex items-center gap-1.5 text-[10px] text-gold-dim/60 tracking-wider"
+            >
+              <span className="w-1 h-1 rounded-full bg-gold/30" />
+              {badge}
+            </span>
+          ))}
+        </div>
+      </div>
 
-          {/* Right: Diagnosis form */}
-          <div className="order-1 lg:order-2" id="diagnosis-form">
+      {/* ═══ BOTTOM: 2-column Form + Profile ═══ */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-5 sm:px-8 pb-16 sm:pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Left: Diagnosis Form */}
+          <div id="diagnosis-form">
             <div className="form-ornate corner-ornament">
-              {/* Header with moon decoration */}
               <div className="text-center mb-6">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <span className="w-8 h-px bg-gradient-to-r from-transparent to-gold/30" />
@@ -142,13 +119,81 @@ export default function HeroSection() {
               )}
             </div>
           </div>
+
+          {/* Right: Fortune Teller Profile */}
+          <div id="fortune-teller">
+            <div className="frame-card p-6 sm:p-8">
+              {/* Profile header with photo */}
+              <div className="flex items-start gap-5 mb-5">
+                {/* Photo with gold frame */}
+                <div className="flex-shrink-0">
+                  <div className="profile-frame inline-block">
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-[3px] border-gold/40 overflow-hidden"
+                         style={{
+                           boxShadow: '0 0 30px rgba(184,150,62,0.12)',
+                           background: 'linear-gradient(145deg, rgba(255,255,255,0.5), rgba(251,247,240,0.3))',
+                         }}>
+                      <Image
+                        src="/images/profile.png"
+                        alt={`${FORTUNE_TELLER.title} ${FORTUNE_TELLER.name}`}
+                        width={112}
+                        height={112}
+                        className="w-full h-full object-cover"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Name + title */}
+                <div className="pt-2">
+                  <p className="text-gold-dim text-[10px] tracking-[0.3em] uppercase mb-1">Fortune Teller</p>
+                  <h2 className="font-serif text-gradient-gold text-xl sm:text-2xl font-bold mb-1">
+                    天命の伝道師
+                  </h2>
+                  <p className="font-serif text-text/80 text-sm font-bold">
+                    {FORTUNE_TELLER.title}　{FORTUNE_TELLER.name}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {FORTUNE_TELLER.specialties.slice(0, 3).map((s, i) => (
+                      <span
+                        key={i}
+                        className="text-[9px] text-gold tracking-wider border border-gold/15 rounded-full px-2 py-0.5"
+                        style={{ background: 'rgba(184,150,62,0.04)' }}
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Bio text */}
+              <div className="mb-5">
+                <p className="text-text/60 text-xs sm:text-sm leading-[2]">
+                  代々続く占師一家に生まれ、幼少期より占の動きと数字の持つ波動を感に感じ、西洋占星術の護符です。新時代から伝わる秘法と鑑定を合わせ、何代人の伝人に寄り添う「暦占術」を示し、これまで1万人以上の運命を鑑定させてきました。
+                </p>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="frame-card p-3 text-center">
+                  <p className="text-gold-dim text-[9px] tracking-wider mb-0.5">鑑定実績</p>
+                  <p className="font-serif text-gradient-gold text-xl sm:text-2xl font-bold">30,000<span className="text-[10px]">件+</span></p>
+                </div>
+                <div className="frame-card p-3 text-center">
+                  <p className="text-gold-dim text-[9px] tracking-wider mb-0.5">的中率満足度</p>
+                  <p className="font-serif text-gradient-gold text-xl sm:text-2xl font-bold">98.2<span className="text-[10px]">%</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Bottom ornamental border */}
       <div className="absolute bottom-0 left-0 right-0">
         <div className="h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-        <div className="h-px mt-1 bg-gradient-to-r from-transparent via-gold/8 to-transparent" />
       </div>
     </section>
   );

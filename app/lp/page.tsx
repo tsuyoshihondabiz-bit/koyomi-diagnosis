@@ -3,10 +3,7 @@ import LpNavigation from '@/components/lp/LpNavigation';
 import HeroSection from '@/components/lp/HeroSection';
 import MethodBranding from '@/components/lp/MethodBranding';
 import FeaturesSection from '@/components/lp/FeaturesSection';
-import FortunetellerProfile from '@/components/lp/FortunetellerProfile';
 import TestimonialsSection from '@/components/lp/TestimonialsSection';
-import EducationalSection from '@/components/lp/EducationalSection';
-import TypesGridSection from '@/components/lp/TypesGridSection';
 import FaqSection from '@/components/lp/FaqSection';
 import FinalCTA from '@/components/lp/FinalCTA';
 import LineCTA from '@/components/LineCTA';
@@ -64,14 +61,11 @@ export default function LpPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
       />
 
-      {/* Page Sections */}
+      {/* Page Sections — Stitch デザイン準拠 */}
       <HeroSection />
       <MethodBranding />
       <FeaturesSection />
-      <FortunetellerProfile />
       <TestimonialsSection />
-      <EducationalSection />
-      <TypesGridSection />
       <FaqSection />
 
       {/* LINE CTA */}
