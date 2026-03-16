@@ -8,7 +8,7 @@ export default function FaqSection() {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <section className="relative py-20 sm:py-28 px-5 sm:px-8 bg-celestial-4 overflow-hidden">
+    <section id="faq" className="relative py-20 sm:py-28 px-5 sm:px-8 bg-celestial-4 overflow-hidden">
       <div className="relative z-10 max-w-3xl mx-auto">
         <SectionHeading
           title="よくある質問"

@@ -520,6 +520,30 @@ body {
   border: 1px solid rgba(255,255,255,0.15);
 }
 
+/* ══════════════════════════════════════
+   DIAMOND NUMBER BADGE
+   (参考: Stitch生成デザイン)
+   ══════════════════════════════════════ */
+
+.diamond-badge {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+  border: 2px solid rgba(201,168,76,0.4);
+  border-radius: 4px;
+  background: rgba(10,14,42,0.8);
+  box-shadow:
+    0 0 20px rgba(201,168,76,0.1),
+    inset 0 0 15px rgba(201,168,76,0.05);
+}
+
+.diamond-badge > span {
+  transform: rotate(-45deg);
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .star, .orb, .dot-pulse, .sparkle-star, .profile-frame::before, .profile-frame::after {

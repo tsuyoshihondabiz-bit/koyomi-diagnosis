@@ -16,12 +16,25 @@ export default function Footer() {
 
         {/* Links */}
         <div className="flex items-center justify-center gap-6 text-[10px] text-text-dim/40 tracking-wider mb-6">
-          <Link href="/" className="hover:text-text-dim/60 transition-colors">
-            診断する
-          </Link>
           <Link href="/lp" className="hover:text-text-dim/60 transition-colors">
             暦占術とは
           </Link>
+          <span className="text-text-dim/15">|</span>
+          <Link href="/" className="hover:text-text-dim/60 transition-colors">
+            診断する
+          </Link>
+          <span className="text-text-dim/15">|</span>
+          <span className="text-text-dim/25 cursor-default">
+            プライバシーポリシー
+          </span>
+          <span className="text-text-dim/15">|</span>
+          <span className="text-text-dim/25 cursor-default">
+            特定商取引法に基づく表記
+          </span>
+          <span className="text-text-dim/15">|</span>
+          <span className="text-text-dim/25 cursor-default">
+            運営方針
+          </span>
         </div>
 
         {/* Copyright */}

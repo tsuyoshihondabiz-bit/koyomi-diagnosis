@@ -24,22 +24,19 @@ export default function FinalCTA() {
             <span className="text-gold/30 text-[8px]">✧</span>
           </div>
 
-          <p className="font-serif text-text/60 text-sm mb-2 tracking-wider">
-            まだ鑑定していませんか？
-          </p>
-          <p className="font-serif text-gradient-gold text-xl sm:text-2xl font-bold mb-3"
+          <p className="font-serif text-gradient-gold text-2xl sm:text-3xl font-bold mb-2 leading-[1.6]"
              style={{ textShadow: '0 0 20px rgba(201,168,76,0.2)' }}>
-            あなたの暦占術タイプを知る
+            あなたの運命の扉を、<br />今ここで開く。
           </p>
-          <p className="text-text-dim text-xs mb-8 tracking-wider">
-            108通りの恋愛パターンから、あなただけの結果をお届けします
+          <p className="text-text-dim text-xs mb-8 tracking-wider leading-relaxed">
+            星座と数字が導き出す、究極の答えをその手に。
           </p>
 
           <button
             onClick={scrollToForm}
             className="btn-gold px-14 py-5 text-lg cursor-pointer"
           >
-            無料で鑑定する
+            無料で鑑定を開始する
           </button>
 
           <div className="ornament-divider mt-6">

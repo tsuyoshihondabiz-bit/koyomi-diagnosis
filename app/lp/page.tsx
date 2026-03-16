@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import LpNavigation from '@/components/lp/LpNavigation';
 import HeroSection from '@/components/lp/HeroSection';
 import MethodBranding from '@/components/lp/MethodBranding';
 import FeaturesSection from '@/components/lp/FeaturesSection';
@@ -50,6 +51,7 @@ export default function LpPage() {
 
   return (
     <>
+      <LpNavigation />
       <GrainOverlay />
 
       {/* Structured Data */}

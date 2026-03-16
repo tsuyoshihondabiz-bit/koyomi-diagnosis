@@ -4,22 +4,22 @@ const FEATURES = [
   {
     num: '01',
     icon: '☽',
-    title: '108タイプの精密鑑定',
-    desc: '12星座と9つの運命数の掛け合わせにより、あなたの恋愛傾向を108パターンで精密に分析。星座だけでは見えない深層心理まで読み解きます。',
+    title: '圧倒的な具体性',
+    desc: '12星座と9つの運命数の掛け合わせにより、108パターンの精密鑑定を実現。「いつ」「どこで」「誰と」という具体的な転機を明確にお伝えします。',
     accent: 'gold',
   },
   {
     num: '02',
     icon: '♡',
-    title: '恋愛に特化した鑑定',
-    desc: '恋愛パターン・相性・ベストパートナー・ソウルメイトまで、恋愛に関するあらゆる側面を鑑定。あなたらしい愛し方のヒントをお伝えします。',
+    title: '秘匿された伝統',
+    desc: '歴史と理論に裏打ちされた西洋占星術と、古代ギリシャ発祥の数秘術を融合。暦占術師・暦が20年の研究で到達した独自メソッドです。',
     accent: 'rose',
   },
   {
     num: '03',
     icon: '✧',
-    title: '完全無料・30秒で完了',
-    desc: '会員登録もメールアドレスも不要。ニックネームと生年月日を入力するだけで、すぐに鑑定結果をお届けします。',
+    title: '個別最適化',
+    desc: 'AIでは導き出せない、人の心の機微を含み取った究極のパーソナライズ診断。あなただけの恋愛傾向と運命を導き出します。',
     accent: 'mystic',
   },
 ];
@@ -32,7 +32,7 @@ const ACCENT_COLORS: Record<string, { border: string; glow: string; text: string
 
 export default function FeaturesSection() {
   return (
-    <section className="relative py-20 sm:py-28 px-5 sm:px-8 bg-celestial-3 overflow-hidden">
+    <section id="features" className="relative py-20 sm:py-28 px-5 sm:px-8 bg-celestial-3 overflow-hidden">
       {/* Scattered sparkles */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <span className="sparkle-star absolute text-gold/20 text-sm top-[15%] left-[8%]">✦</span>
@@ -42,8 +42,8 @@ export default function FeaturesSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <SectionHeading
-          title="暦占術の3つの特徴"
-          subtitle="Features"
+          title="選ばれる3つの理由"
+          subtitle="Why Choose Us"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -52,17 +52,14 @@ export default function FeaturesSection() {
             return (
               <div
                 key={i}
-                className={`frame-card corner-ornament p-7 text-center card-hover border-t-2 ${colors.border}`}
+                className={`frame-card p-7 text-center card-hover border-t-2 ${colors.border}`}
                 style={{ boxShadow: `0 4px 30px ${colors.glow}` }}
               >
-                {/* Number */}
-                <div className="font-display italic text-gold/20 text-4xl mb-2">
-                  {feature.num}
-                </div>
-
-                {/* Icon */}
-                <div className={`text-3xl mb-4 ${colors.text}`}>
-                  {feature.icon}
+                {/* Diamond number badge */}
+                <div className="diamond-badge mx-auto mb-5">
+                  <span className={`font-serif font-bold text-lg ${colors.text}`}>
+                    {feature.num}
+                  </span>
                 </div>
 
                 {/* Title */}

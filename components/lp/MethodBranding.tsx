@@ -2,7 +2,7 @@ import SectionHeading from './SectionHeading';
 
 export default function MethodBranding() {
   return (
-    <section className="relative py-20 sm:py-28 px-5 sm:px-8 bg-celestial-2 overflow-hidden">
+    <section id="method" className="relative py-20 sm:py-28 px-5 sm:px-8 bg-celestial-2 overflow-hidden">
       {/* Decorative large kanji watermark */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none" aria-hidden="true">
         <span className="font-serif text-[15rem] sm:text-[20rem] text-gold/[0.02] font-bold leading-none">
