@@ -38,7 +38,7 @@ export default function DiagnosisForm({ onSubmit }: DiagnosisFormProps) {
           maxLength={20}
           placeholder="あなたの名前を入力してください"
           required
-          className="w-full px-4 py-3.5 rounded-xl bg-white border border-gold/15 text-text placeholder:text-text-dim/40 focus:outline-none focus:border-gold/40 focus:shadow-[0_0_15px_rgba(184,150,62,0.08)] transition-all text-sm"
+          className="w-full px-4 py-3.5 rounded-xl bg-bg-input border border-gold/15 text-text placeholder:text-text-dim/40 focus:outline-none focus:border-gold/40 focus:shadow-[0_0_15px_rgba(201,168,76,0.08)] transition-all text-sm"
         />
       </div>
 
@@ -54,7 +54,7 @@ export default function DiagnosisForm({ onSubmit }: DiagnosisFormProps) {
           min="1940-01-01"
           max="2010-12-31"
           required
-          className="w-full px-4 py-3.5 rounded-xl bg-white border border-gold/15 text-text focus:outline-none focus:border-gold/40 focus:shadow-[0_0_15px_rgba(184,150,62,0.08)] transition-all text-sm"
+          className="w-full px-4 py-3.5 rounded-xl bg-bg-input border border-gold/15 text-text focus:outline-none focus:border-gold/40 focus:shadow-[0_0_15px_rgba(201,168,76,0.08)] transition-all text-sm"
         />
       </div>
 

@@ -6,7 +6,7 @@ export default function LpNavigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-lg border-b border-gold/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-deep/80 backdrop-blur-lg border-b border-gold/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-8 flex items-center justify-between h-14">
         {/* Brand */}
         <button
@@ -17,7 +17,7 @@ export default function LpNavigation() {
         </button>
 
         {/* Nav links - hidden on mobile */}
-        <div className="hidden sm:flex items-center gap-6 text-xs text-text-dim tracking-wider">
+        <div className="hidden sm:flex items-center gap-6 text-xs text-text-dim/60 tracking-wider">
           <button onClick={() => scrollTo('fortune-teller')} className="hover:text-gold transition-colors cursor-pointer">
             鑑定士
           </button>
@@ -35,7 +35,7 @@ export default function LpNavigation() {
         {/* CTA */}
         <button
           onClick={() => scrollTo('diagnosis-form')}
-          className="text-xs font-serif font-bold bg-gradient-to-r from-gold to-gold-bright text-white px-5 py-2 rounded-full cursor-pointer hover:shadow-[0_0_15px_rgba(184,150,62,0.3)] transition-all"
+          className="text-xs font-serif font-bold bg-gradient-to-r from-gold to-gold-bright text-bg-deep px-5 py-2 rounded-full cursor-pointer hover:shadow-[0_0_15px_rgba(201,168,76,0.3)] transition-all"
         >
           無料で占う
         </button>

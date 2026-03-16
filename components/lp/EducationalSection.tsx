@@ -45,7 +45,7 @@ export default function EducationalSection() {
             >
               <div className="flex items-center gap-4 mb-3">
                 <span className="num-badge">{item.num}</span>
-                <h3 className="font-serif text-gold text-base font-bold">
+                <h3 className="font-serif text-gold-bright text-base font-bold">
                   {item.title}
                 </h3>
               </div>

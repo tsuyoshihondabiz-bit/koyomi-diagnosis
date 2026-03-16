@@ -22,7 +22,7 @@ export default function CelestialBackground({ count = 60 }: { count?: number }) 
           w: seed % 3 + 1,
           x: `${(seed * 61 + i * 13) % 100}%`,
           y: `${(seed * 37 + i * 7) % 100}%`,
-          opacity: (seed % 25 + 8) / 100,
+          opacity: (seed % 40 + 20) / 100,
           dur: `${seed % 5 + 2}s`,
           delay: `${(i * 0.3) % 4}s`,
         };
@@ -41,27 +41,27 @@ export default function CelestialBackground({ count = 60 }: { count?: number }) 
             height: `${s.w}px`,
             left: s.x,
             top: s.y,
-            background: i % 5 === 0 ? '#D4A843' : i % 3 === 0 ? '#C87D94' : '#B8963E',
+            background: i % 5 === 0 ? '#e8cc6a' : '#ffffff',
             opacity: s.opacity,
             animation: `twinkle ${s.dur} ease-in-out infinite`,
             animationDelay: s.delay,
-            boxShadow: s.w > 2 ? '0 0 4px rgba(184,150,62,0.2)' : 'none',
+            boxShadow: s.w > 2 ? '0 0 4px rgba(255,255,255,0.3)' : 'none',
           }}
         />
       ))}
 
       {/* Constellation SVG lines */}
       <svg className="absolute inset-0 w-full h-full opacity-[0.06]">
-        <line x1="8%" y1="25%" x2="22%" y2="45%" stroke="#B8963E" strokeWidth="0.5" />
-        <line x1="22%" y1="45%" x2="38%" y2="20%" stroke="#B8963E" strokeWidth="0.5" />
-        <line x1="38%" y1="20%" x2="55%" y2="50%" stroke="#B8963E" strokeWidth="0.5" />
-        <line x1="55%" y1="50%" x2="68%" y2="30%" stroke="#B8963E" strokeWidth="0.5" />
-        <line x1="68%" y1="30%" x2="82%" y2="55%" stroke="#B8963E" strokeWidth="0.5" />
-        <line x1="82%" y1="55%" x2="92%" y2="35%" stroke="#B8963E" strokeWidth="0.5" />
+        <line x1="8%" y1="25%" x2="22%" y2="45%" stroke="#c9a84c" strokeWidth="0.5" />
+        <line x1="22%" y1="45%" x2="38%" y2="20%" stroke="#c9a84c" strokeWidth="0.5" />
+        <line x1="38%" y1="20%" x2="55%" y2="50%" stroke="#c9a84c" strokeWidth="0.5" />
+        <line x1="55%" y1="50%" x2="68%" y2="30%" stroke="#c9a84c" strokeWidth="0.5" />
+        <line x1="68%" y1="30%" x2="82%" y2="55%" stroke="#c9a84c" strokeWidth="0.5" />
+        <line x1="82%" y1="55%" x2="92%" y2="35%" stroke="#c9a84c" strokeWidth="0.5" />
         {/* Star nodes */}
-        <circle cx="22%" cy="45%" r="2.5" fill="#B8963E" opacity="0.2" />
-        <circle cx="55%" cy="50%" r="2" fill="#B8963E" opacity="0.15" />
-        <circle cx="82%" cy="55%" r="2.5" fill="#B8963E" opacity="0.2" />
+        <circle cx="22%" cy="45%" r="2.5" fill="#c9a84c" opacity="0.2" />
+        <circle cx="55%" cy="50%" r="2" fill="#c9a84c" opacity="0.15" />
+        <circle cx="82%" cy="55%" r="2.5" fill="#c9a84c" opacity="0.2" />
       </svg>
     </div>
   );

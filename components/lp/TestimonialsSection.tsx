@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
             >
               <div className="flex items-start gap-4">
                 <div className="flex-1">
-                  <p className={`text-text/70 leading-[2] mb-4 ${i === 0 ? 'text-base font-serif' : 'text-sm'}`}>
+                  <p className={`text-text/80 leading-[2] mb-4 ${i === 0 ? 'text-base font-serif' : 'text-sm'}`}>
                     {t.text}
                   </p>
                   <div className="flex items-center gap-3">

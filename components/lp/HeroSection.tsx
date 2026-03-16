@@ -57,7 +57,7 @@ export default function HeroSection() {
       <div className="relative z-10 pt-20 sm:pt-24 pb-6 text-center">
         {/* Subtitle with ornamental dashes */}
         <p className="text-gold-dim/70 text-xs sm:text-sm tracking-[0.3em] mb-4">
-          ── 運命を精解く、古の知恵 ──
+          ── 運命を紐解く、古の知恵 ──
         </p>
 
         {/* Main title */}
@@ -67,23 +67,26 @@ export default function HeroSection() {
 
         {/* Tagline */}
         <p className="text-text/50 text-sm sm:text-base tracking-wider mb-8">
-          星座 × 数秘で導く 108タイプの恋愛診断
+          星座 × 数秘で導く <span className="text-gold font-bold">108</span>タイプの恋愛診断
         </p>
 
         {/* CTA button */}
         <button
           onClick={() => document.getElementById('diagnosis-form')?.scrollIntoView({ behavior: 'smooth' })}
-          className="btn-gold px-12 py-4 text-base sm:text-lg cursor-pointer mb-4"
+          className="btn-gold px-12 py-4 text-base sm:text-lg cursor-pointer mb-3"
         >
-          無料で占う
+          無料で占う ✨
         </button>
+
+        {/* Limited time notice */}
+        <p className="text-gold-dim/50 text-xs mb-4">※期間限定・お一人様1回限り</p>
 
         {/* Trust badge */}
         <div className="flex items-center justify-center gap-4 mt-4">
           {['完全無料', '30秒で鑑定', '登録不要'].map((badge, i) => (
             <span
               key={i}
-              className="flex items-center gap-1.5 text-[10px] text-gold-dim/60 tracking-wider"
+              className="flex items-center gap-1.5 text-[10px] text-gold-dim/60 tracking-wider border border-gold/15 rounded-full px-3 py-1"
             >
               <span className="w-1 h-1 rounded-full bg-gold/30" />
               {badge}
@@ -125,23 +128,20 @@ export default function HeroSection() {
             <div className="frame-card p-6 sm:p-8">
               {/* Profile header with photo */}
               <div className="flex items-start gap-5 mb-5">
-                {/* Photo with gold frame */}
+                {/* Photo - circular crop (removes corner artifacts, shows gold ring from image) */}
                 <div className="flex-shrink-0">
-                  <div className="profile-frame inline-block">
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-[3px] border-gold/40 overflow-hidden"
-                         style={{
-                           boxShadow: '0 0 30px rgba(184,150,62,0.12)',
-                           background: 'linear-gradient(145deg, rgba(255,255,255,0.5), rgba(251,247,240,0.3))',
-                         }}>
-                      <Image
-                        src="/images/profile.png"
-                        alt={`${FORTUNE_TELLER.title} ${FORTUNE_TELLER.name}`}
-                        width={112}
-                        height={112}
-                        className="w-full h-full object-cover"
-                        priority
-                      />
-                    </div>
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden"
+                       style={{
+                         boxShadow: '0 0 30px rgba(201,168,76,0.2), 0 0 60px rgba(201,168,76,0.1)',
+                       }}>
+                    <Image
+                      src="/images/profile.png"
+                      alt={`${FORTUNE_TELLER.title} ${FORTUNE_TELLER.name}`}
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-cover scale-110"
+                      priority
+                    />
                   </div>
                 </div>
 

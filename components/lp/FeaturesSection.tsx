@@ -25,9 +25,9 @@ const FEATURES = [
 ];
 
 const ACCENT_COLORS: Record<string, { border: string; glow: string; text: string }> = {
-  gold: { border: 'border-gold/25', glow: 'rgba(184,150,62,0.08)', text: 'text-gold' },
-  rose: { border: 'border-rose/25', glow: 'rgba(200,125,148,0.08)', text: 'text-rose-pale' },
-  mystic: { border: 'border-mystic/25', glow: 'rgba(139,123,184,0.08)', text: 'text-mystic' },
+  gold: { border: 'border-gold/25', glow: 'rgba(201,168,76,0.08)', text: 'text-gold' },
+  rose: { border: 'border-rose/25', glow: 'rgba(192,108,132,0.08)', text: 'text-rose-pale' },
+  mystic: { border: 'border-mystic/25', glow: 'rgba(123,107,175,0.08)', text: 'text-mystic' },
 };
 
 export default function FeaturesSection() {

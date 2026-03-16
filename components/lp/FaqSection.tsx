@@ -22,7 +22,7 @@ export default function FaqSection() {
                 onClick={() => setExpanded(expanded === i ? null : i)}
                 className="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group"
               >
-                <span className="text-text text-sm sm:text-base pr-4 leading-relaxed group-hover:text-gold transition-colors">
+                <span className="text-text text-sm sm:text-base pr-4 leading-relaxed group-hover:text-gold-bright/80 transition-colors">
                   <span className="text-gradient-gold font-serif font-bold mr-3 text-base">Q.</span>
                   {item.q}
                 </span>
