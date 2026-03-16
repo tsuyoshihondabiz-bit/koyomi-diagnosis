@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>こよみ。Note記事コレクション — 全5本</title>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080810;--card:#0d0d18;--gold:#c9a84c;--gold-b:#e8cc6a;--gold-d:#8a7333;--text:#d0d0e0;--dim:#6a6a88;--border:rgba(201,168,76,0.1);--teal:#4db6ac;--rose:#c06c84}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Zen Kaku Gothic New',sans-serif;background:var(--bg);color:var(--text);padding:2rem 1rem;line-height:2.0}
+.c{max-width:780px;margin:0 auto}
+h1{font-family:'Shippori Mincho',serif;color:var(--gold-b);font-size:1.3rem;text-align:center;margin-bottom:.3rem}
+.sub{text-align:center;color:var(--dim);font-size:.7rem;letter-spacing:.3em;margin-bottom:2.5rem}
+h2{font-family:'Shippori Mincho',serif;color:var(--gold);font-size:1.05rem;margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.meta{display:flex;gap:1.2rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.tag{font-size:.68rem;padding:.2rem .6rem;border-radius:20px;border:1px solid rgba(201,168,76,.2);color:var(--gold-d)}
+.tag.free{border-color:rgba(77,182,172,.3);color:var(--teal)}
+.tag.paid{border-color:rgba(192,108,132,.3);color:var(--rose)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:2rem;margin:1.5rem 0}
+.article-title{font-family:'Shippori Mincho',serif;color:var(--gold-b);font-size:1.15rem;margin-bottom:.5rem}
+.article-subtitle{color:var(--dim);font-size:.78rem;margin-bottom:1.2rem}
+.body p{font-size:.85rem;margin-bottom:1rem;color:var(--text)}
+.body h3{font-family:'Shippori Mincho',serif;color:var(--gold);font-size:.95rem;margin:1.8rem 0 .8rem}
+.body h4{color:var(--gold-d);font-size:.88rem;margin:1.2rem 0 .5rem}
+.body ul{margin:.5rem 0 1rem 1.2rem;font-size:.85rem}
+.body li{margin-bottom:.4rem}
+.body blockquote{background:rgba(201,168,76,.04);border-left:3px solid var(--gold-d);padding:.8rem 1.2rem;margin:1rem 0;font-size:.82rem;color:var(--dim);font-style:italic;line-height:2}
+.divider{text-align:center;color:var(--gold-d);margin:2.5rem 0;font-size:.8rem;letter-spacing:.5em;opacity:.4}
+.note-box{background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1);border-radius:8px;padding:1.2rem;margin:1rem 0;font-size:.82rem}
+.cta{text-align:center;margin:1.5rem 0;padding:1.2rem;background:rgba(201,168,76,.06);border-radius:8px;font-size:.85rem}
+.cta a{color:var(--gold-b);text-decoration:none;font-weight:600}
+.paywall{text-align:center;padding:1.5rem;background:linear-gradient(180deg, rgba(192,108,132,0.05) 0%, rgba(192,108,132,0.12) 100%);border:1px dashed rgba(192,108,132,.3);border-radius:8px;margin:1.5rem 0}
+.paywall-label{color:var(--rose);font-size:.8rem;font-weight:600;margin-bottom:.3rem}
+.paywall-price{color:var(--rose);font-size:1.1rem;font-family:'Shippori Mincho',serif}
+.toc{list-style:none;margin:1rem 0}
+.toc li{font-size:.82rem;padding:.4rem 0;border-bottom:1px solid rgba(201,168,76,.06)}
+.toc li a{color:var(--teal);text-decoration:none}
+.toc .num{color:var(--gold-d);font-family:'JetBrains Mono',monospace;font-size:.72rem;margin-right:.5rem}
+.footer{text-align:center;color:var(--dim);font-size:.68rem;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--border)}
+.strategy{background:rgba(77,182,172,.04);border:1px solid rgba(77,182,172,.12);border-radius:8px;padding:1.2rem;margin:1rem 0;font-size:.82rem;color:var(--teal)}
+</style>
+</head>
+<body>
+<div class="c">
+
+<h1>こよみ。 — Note記事コレクション</h1>
+<p class="sub">NOTE ARTICLE COLLECTION — 5 ARTICLES</p>
+
+<div class="strategy">
+<strong>Note運用戦略：</strong>無料記事3本（集客・信頼構築）＋ 有料記事2本（¥500）でマネタイズ開始。無料記事→診断サイト→LINE→有料記事の導線を意識。SEOキーワード「星座 数秘術」「恋愛 占い タイプ」を各記事に自然配置。
+</div>
+
+<h2>記事一覧</h2>
+<ul class="toc">
+<li><span class="num">#01</span><a href="#a1">【完全版】星座×数秘術で導く「恋愛108タイプ」とは？</a><span class="tag free" style="margin-left:.5rem">無料</span></li>
+<li><span class="num">#02</span><a href="#a2">12星座別「好きになる瞬間」と「冷める瞬間」</a><span class="tag free" style="margin-left:.5rem">無料</span></li>
+<li><span class="num">#03</span><a href="#a3">数秘術の「運命数」で読み解く、あなたの恋愛パターン</a><span class="tag free" style="margin-left:.5rem">無料</span></li>
+<li><span class="num">#04</span><a href="#a4">【保存版】全108タイプ・恋愛相性マトリクス</a><span class="tag paid" style="margin-left:.5rem">¥500</span></li>
+<li><span class="num">#05</span><a href="#a5">2026年下半期・星座×数秘で読む「運命の出会いカレンダー」</a><span class="tag paid" style="margin-left:.5rem">¥500</span></li>
+</ul>
+
+<!-- ========================================== -->
+<!-- ARTICLE 1: 無料 — 導入・ブランド認知 -->
+<!-- ========================================== -->
+<div class="divider">☽ ✦ ☽</div>
+
+<div class="card" id="a1">
+<div class="meta">
+<span class="tag free">無料記事</span>
+<span class="tag">#星座占い</span>
+<span class="tag">#数秘術</span>
+<span class="tag">#恋愛</span>
+<span class="tag">#108タイプ</span>
+</div>
+
+<h3 class="article-title">【完全版】星座×数秘術で導く「恋愛108タイプ」とは？</h3>
+<p class="article-subtitle">— 従来の12星座だけでは見えなかった、あなただけの恋愛パターン</p>
+
+<div class="body">
+
+<p>「私って牡牛座だけど、牡牛座の恋愛傾向にあまり当てはまらない気がする……」</p>
+
+<p>そう感じたことはありませんか？</p>
+
+<p>実は、星座だけで恋愛パターンを語るのは、地図の縮尺を最大にして道案内するようなもの。方角はわかるけれど、あなただけの道筋は見えてきません。</p>
+
+<p>こよみ。が提唱する「星座×数秘術」メソッドは、西洋占星術の12星座と、数秘術の運命数（1〜9）を掛け合わせることで、全108通りの恋愛タイプを導き出します。</p>
+
+<h3>なぜ「108」なのか</h3>
+
+<p>108という数字には特別な意味があります。仏教では煩悩の数、ヒンドゥー教では宇宙の完全数。人間の心の複雑さをすべて包み込む数字として、古来から聖なる数とされてきました。</p>
+
+<p>星座×数秘術が108タイプになるのは、偶然ではなく必然。12の星座エネルギーと9つの運命数が交差する108の座標点に、あなたの恋愛の本質が刻まれています。</p>
+
+<h3>星座が教えてくれること</h3>
+
+<p>12星座は「どんな刺激に心が動くか」を教えてくれます。恋愛においては「惹かれる相手のタイプ」や「理想の関係性」を映し出す鏡です。</p>
+
+<h4>火の星座（牡羊座・獅子座・射手座）</h4>
+<p>情熱的で直感的な恋をします。「ビビッときた」瞬間にすべてが始まる。停滞した関係には耐えられません。</p>
+
+<h4>地の星座（牡牛座・乙女座・山羊座）</h4>
+<p>安定と信頼を積み重ねる恋愛。すぐには動かないけれど、一度決めたら揺るがない。五感で愛を確かめます。</p>
+
+<h4>風の星座（双e��座・天秤座・水瓶座）</h4>
+<p>知的な刺激と自由を求める恋。会話ぇ途切れない相手に惹かれ、束縛を嫌います。</p>
+
+<h4>水の星座（蟹座・蠍座ヽ魚座）</h4>
+<p>深い感情的つながりを求める恋。相手の心の奥底まで知りたい。言葉にならない感情を共有できる関係が理想です。</p>
+
+<h3>数秘術の「運命数」が加える深み</h3>
+
+<p>数秘術の運命数は「恋愛における行動パターン」を示します。同じ牡羊座でも、運命数1の人と運命数7の人では、恋の進め方がまったく違います。</p>
+
+<p>運命数の算出方法は簡単。生年月日の数字をすべて足し、一桁になるまで繰り返します。</p>
+
+<blockquote>
+例：1995年3月15日 → 1+9+9+5+3+1+5 = 33 → 3+3 = 6<br>
+この人の運命数は「6」
+</blockquote>
+
+<h4>各運命数の恋愛キーワード</h4>
+<ul>
+<li><strong>1 — リーダー型：</strong>自分から動く。追いかける恋が燃える</li>
+<li><strong>2 — パートナー型：</strong>調和を重んじる。相手に合わせる天才</li>
+<li><strong>3 — 表現者型：</strong>楽しさ重視。サプライズと笑いで愛を伝える</li>
+<li><strong>4 — 建設者型：</strong>堅実な愛。日常の積み重ねこそ愛の証</li>
+<li><strong>5 — 冒険者型：</strong>変化を求める。マンネリは最大の敵</li>
+<li><strong>6 — 奉仕者型：</strong>尽くす愛。相手の幸せ＝自分の幸せ</li>
+<li><strong>7 — 探求者型：</strong>精神的な深いつながりを求める。表面的な恋は無理</li>
+<li><strong>8 — 達成者型：</strong>パワーカップル志向。互いに高め合える関係</li>
+<li><strong>9 — 博愛者型：</strong>包容力のある愛。相手をまるごと受け入れる</li>
+</ul>
+
+<h3>あなたの108タイプを知る</h3>
+
+<p>星座×運命数の組み合わせが、あなただけの恋愛タイプを決定します。</p>
+
+<p>たとえば「蠍座×運命数5」は、深い感情を持ちながらも変化を恐れないタイプ。一見矛盾するこの組み合わせが「情熱的だけ�{b��ɼ杍�〚しない大人の恋」を求める独特のパターンを生み出します。</p>
+
+<p>「天秤座×運命数4」は、自由を愛する風の星座に安定志向の数秘が加わることで「おしゃれで知的だけど、家庭的な一面もある」という魅力的なギャップが生まれます。</p>
+
+</div>
+
+<div class="cta">
+🔮 あなたの108タイプを30秒で無料診断<br>
+<a href="#">→ こよみ式タイプ診断を受ける</a>
+</div>
+
+<div class="note-box">
+<strong>次回予告：</strong>12星座別「好きになる瞬間」と「冷める瞬間」を徵底解説。あの人の星座から、恋愛攻略法が見えてきます。
+</div>
+</div>
+
+<!-- ========================================== -->
+<!-- ARTICLE 2: 無料 — エンゲージメント・共感 -->
+<!-- ========================================== -->
+<div class="divider">☽ ✦ ☽</div>
+
+<div class="card" id="a2">
+<div class="meta">
+<span class="tag free">無料記事</span>
+<span class="tag">#12星座</span>
+<span class="tag">#恋愛心理</span>
+<span class="tag">#好きになる瞬間</span>
+</div>
+
+<h3 class="article-title">12星座別「好きになる瞬間」と「冷める瞬間」</h3>
+<p class="article-subtitle">— 気になるあの人の星座から、恋の急所がわかる</p>
+
+<div class="body">
+
+<p>恋の始まりには、いつも「きっかけ」があります。でもその「きっかけ」は、星座によってまるで違うのをご存知ですか？</p>
+
+<p>今回は12星座それぞれの「恋に落ちる瞬間」と、逆に「気持ちが冷めるポイント」を解説します。気になるあの人の星座をチェックしてみてください。</p>
+
+<h3>♈ 牡羊座（3/21〜4/19）</h3>
+<h4>好きになる瞬間</h4>
+<p>自分にないものを持っている人を見たとき。特に「この人には敵わない」と感じる瞬間がトリゲーです。尊敬＝恋心。ストレートに気持ちを伝えてくれる人にも弱いです。</p>
+<h4>冷める瞬間</h4>
+<p>優柔不断な態度が続いたとき。「どっちでもいい」が一番嫌い。また、追いかけきった後に相手から追いかけられると急速に熱が冷めることも。</p>
+
+<h3>♉ 牡牛座（4/20〜5/20）</h3>
+<h4>好きになる瞬間</h4>
+<p>一緒にいるときの居心地の良さに気づいたとき。美味しいものを一緒に食べて「この人との時間、好きだな」と感じる穏やかな自覚。急がせない人に惹かれます。</p>
+<h4>冷める瞬間</h4>
+<p>約束を軽く扱われたとき。些細な約束ほど大事にする牡牛座にとって、「ごめん忘れてた」の繰り返しは致命的です。</p>
+
+<h3>♊ 双子座（5/21〜6/21）</h3>
+<h4>好きになる瞬間</h4>
+<p>会話が予想外の方向に転がったとき。「この人と話してると飽きない」が恋の入口。知的好奇心を刺激してくれる人には抗えません。</p>
+<h4>冷める瞬間</h4>
+<p>話が通じない。もしくは同じ話ばかりする人。新しい発見がなくなった瞬間、双子座の心は別の場所を探し始めます。</p>
+
+<h3>♋ 蟹座（6/22〜7/22）</h3>
+<h4>好きになる瞬間</h4>
+<p>自分の弱さを見せたとき、受け止めてくれた人に恋をします。「この人には素の自分でいられる」という安心感が、蟹座にとって最大の恋のトリガー。</p>
+<h4>冷める瞬間</h4>
+<p>家族や友人を大切にしない態度を見たとき。身近な人への接し方にすべてが表れると蟹座は知っています。</p>
+
+<h3>♌ 獅子座（7/23〜8/22）</h3>
+<h4>好きになる瞬間</h4>
+<p>大勢の中で凪分だけを特別扱いしてくれたとき。「この人は、私のことちゃんと見てくれてる」という実感が恋心に火をつけます。</p>
+<h4>冷める瞬間</h4>
+<p>自分の存在を軽く扱われたとき。人前でのダメ出し、旡読スルーの常態化、〈誰でもいいんでしょ」的な態度は獅子座の逆鱗に触れます。</p>
+
+<h3>♍ 乙女座（8/23〜9/22）</h3>
+<h4>好きになる瞬間</h4>
+<p>細かいところまで気づく相手に出会ったとき。「髲切った？」のひと言が、乙女座の心を射抜きます。丁寧に生きている人に惹かれます。</p>
+<h4>冷める瞬間</h4>
+<p>衛生観念が合わないとき、言動の矛盾を見つけたとき。「あのとき言ってたことと違う」に乙女座は敏感です。</p>
+
+<h3>♎ 天秤座（9/23〜10/23）</h3>
+<h4>好きになる瞬間</h4>
+<p>センスが合う人に出会ったとき。同じものを見て「いいね」と言える感覚の一致が天秤座の恋の始まり。美意識を共有できる相手に弱いです。</p>
+<h4>冷める瞬間</h4>
+<p>一方的な関係になったとき。常にどちらかだけが我慢する関係は、バランスを重んじる天秤座にとって苦痛です。</p>
+
+<h3>♏ 蠍座（10/24〜11/22）</h3>
+<h4>好きになる瞬間</h4>
+<p>秘密を共有できたとき。「この話、誰にもしたことないんだけど」——その瞬間、蠍座は相手と強い絆を感じます。深さのない関係には興味がありません。</p>
+<h4>冷める瞬間</h4>
+<p>裏切り、嘘、二股。信頼関係が壊れたら、蠍座はもう戻れません。一度冷めたら完全に消えます。</p>
+
+<h3>♐ 射手座（11/23〜12/21）</h3>
+<h4>好きになる瞬間</h4>
+<p>「この人と一緒にいると世界が広がる」と感じたとき。新しい体験を共有できる相手、未知の場所に一緒に行ってくれる人に恋をします。</p>
+<h4>冷める瞬間</h4>
+<p>行動を制限されたとき。「誰と会ってたの？」「何時に帰るの？」の連続は射手座を最速で遠ざけます。</p>
+
+<h3>♑ 山羊座（12/22〜1/19）</h3>
+<h4>好きになる瞬間</h4>
+<p>仕事や目標に真剣に向き合っている姿を見たとき。努力している人に惹かれます。「一緒に未来を作れそう」という確信が、山羊座の恋のスイッチ。</p>
+<h4>冷める瞬間</h4>
+<p>向上心がない人、時間を無駄にする人。「この人と一緒にいても成長できない」と感じた瞬間、山羊座は静かに距離を置きます。</p>
+
+<h3>♒ 水瓶座（1/20〜2/18）</h3>
+<h4>好きになる瞬間</h4>
+<p>自分の変わった部分を「面白い」と言ってくれたとき。普通じゃない自分を否定しない相手、むしろ面白がってくれる相手に心を開きます。</p>
+<h4>冷める瞬間</h4>
+<p>常識を押し付けてくる人。「普通はこうでしょ」「みんなそうしてるよ」が水瓶座にとっては最大のNG。</p>
+
+<h3>♓ 魚座（2/19〜3/20）</h3>
+<h4>好きになる瞬間</h4>
+<p>相手の辛さや悲しみに共感できたとき。感情を共有できる深いつながりが恋心に変わります。「この人のこと、守ってあげたい」という感親。</p>
+<h4>冷める瞬間</h4>
+<p>感情に鈍感な人、夢を否定する人。「そんなの無理でしょ」のひと言が、魚座の心を遠ざけます。</p>
+
+</div>
+
+<div class="cta">
+🔮 星座×運命数であなたの「恋愛タイプ」をさらに深掘り<br>
+<a href="#">→ 無料タイプ診断はこちら</a>
+</div>
+
+<div class="note-box">
+<strong>関連記事：</strong>数秘術の「運命数」で読み解く、あなたの恋愛パターン
+</div>
+</div>
+
+<!-- ========================================== -->
+<!-- ARTICLE 3: 無料 — 数秘術導入 -->
+<!-- ========================================== -->
+<div class="divider">☽ ✦ ☽</div>
+
+<div class="card" id="a3">
+<div class="meta">
+<span class="tag free">無料記事</span>
+<span class="tag">#数秘術</span>
+<span class="tag">#運命数</span>
+<span class="tag">#恋愛パターン</span>
+</div>
+
+<h3 class="article-title">数秘術の「運命数」で読み解く、あなたの恋愛パターン</h3>
+<p class="article-subtitle">— 生年月日に隠された、あなたの恋の「クセ」</p>
+
+<div class="body">
+
+<p>星座が「どんな人に惹かれるか」を教えてくれるなら、数秘術は「恋愛でどう振る舞うか」を教えてくれます。</p>
+
+<p>数秘術はピタゴラスの時代から2,500年以上の歴史を持つ、数字に宿る意味を読み解き叡智。その中でも「運命数」は、あなたの魂に刻まれた根本的なエネルギーを訨します。</p>
+
+<h3>運命数の計算方法</h3>
+
+<p>生年月日の数字をすべて1桁ずっ足し、一桁になるまで繰り返します。</p>
+
+<blockquote>
+例1：1990年7月23日<br>
+1+9+9+0+7+2+3 = 31 → 3+1 = 4<br>
+運命数は「4」<br><br>
+例2：2001年12月5日<br>
+2+0+0+1+1+2+5 = 11 → 1+1 = 2<br>
+運命数は「2」
+</blockquote>
+
+<h3>運命数1 — 「開拓する恋」</h3>
+<p>恋愛は自分から始めたいタイプ。好きになったら一直線、告白も自分からが基本。リードしたいし、されるよりする方が燃えます。</p>
+<p>ただし、相手を「自分のペースに巻き込みすぎる」傾向も。パートナーの意見に耳を傾ける余裕を持つと、関係はぐんと深まります。</p>
+<p><strong>相性の良い運命数：</strong>2（受け止めてくれる）、5（刺激を与え合える）</p>
+
+<h3>運命数2 — 「寄り添う恋」</h3>
+<p>相手の気持ちを繊細に感じ取る天才。恋愛では「この人のそばにいたい」という穏やかな愛情が特徴です。自分よりも相手を優先できる優しさを持っています。</p>
+<p>ただし、自分の気持ちを後回しにしすぎると、ある日突然限界がくることも。「NO」と言える勇気が、恋をもっと幸せにします。</p>
+<p><strong>相性の良い運命数：</strong>1（引っ張ってくれる）、6（同じ愛情深さ）</p>
+
+<h3>運命数3 — 「彩る恋」</h3>
+<p>恋愛は人生を楽しくするスパイス。デートは常にワクワクしたいし、サプライズも大好き。笑いのある関係が理想です。</p>
+<p>ただし、深刻な話や面們なことから〉けがちり杢も。パートナーが本気で悩んでいるときこそ、しっかり向き合うことが信頼関係の鍵。</p>
+<p><strong>相性の良い運命数：</strong>5（一緒に楽しめる）、7（深さを教えてくれる）</p>
+
+<h3>運命数4 — 「築く恋」</h3>
+<p>一歩一歩、確実に信頼を積み上げていく恋愛スタイル。約束を守り、記念日を覯え、日常の中で愛を形にします。</p>
+<p>変化を恐るあまり、マンネリを放置しがちなのが弱点。たまには計画外のデートや冒険が、関係に新鮮な風を送ります。</p>
+<p><strong>相性の良い運命数：</strong>8（一緒に目標を追える）、2（安心感を共有）</p>
+
+<h3>運命数5 — 「冒険する恋」</h3>
+<p>刺激と自由がなければ生きていけないタイプ。恋愛でも同じ日々の繰り返しには耐えられません。常に「次はどこに行こう？」と考えています。</p>
+<p>ただし、飽きっぽさが恋のアキレス腱。「飽きた＝冷めた」ではなき、新しい楽しさを一緒に見つけるカが長続きの秘訣。</p>
+<p><strong>相性の良い運命数：</strong>3（楽しさが倍増）、1（パワフルな化学反応）</p>
+
+<h3>運命数6 — 「尽くす恋」</h3>
+<p>「あなたのために」が口癖。料理を作り、体調を気遣い、悩みを聞く——そうやって愛を表現します。家庭的で、結婚を見据えた恋愛をしがちです。</p>
+<p>ただし、尽くしすぎは共依存の入口。「相手の幸せ」と「自分の牦ၶ」を混同しないように注意が必要です。</p>
+<p><strong>相性の良い運命数：</strong>2（愛情のキャッチボール）、9（包容力の相乗効果）</p>
+
+<h3>運命数7 — 「探求する恋」</h3>
+<p>表面的な恋には興味がありません。相手の内面、価値観、人生哲学まで深く知りたい。スピリチュアルな繋がりを感じられる関係を求めます。</p>
+<p>一人の時間が絶対に必要なタイプ。それは冷たさではなく、内省のための大切な時間。パートナーがこれを理解してくれるかどうかが鍵。</p>
+<p><strong>相性の良い運命数：</strong>3（軽やかさを与えてくれる）、4（静かに支えてくれる）</p>
+
+<h3>運命数8 — 「達成する恋」</h3>
+<p>お互いに高め合えるパワーカップルが理想。仕事も恋愛も全力で、「一緒にいるとレベルアップできる」関係を求めます。</p>
+<p>ただし、無意識に上下関係を作ってしまうことも。恋愛は勝ち負けではありません。弱さを見せられる関係こそが、本当の強さ。</p>
+<p><strong>相性の良い運命数：</strong>4（着実に支えてくれる）、1（対等に競い合える）</p>
+
+<h3>運命数9 — 「受け入れる恋」</h3>
+<p>すべてを包み込むような大きな愛の持ち主。相手の欠点も含めて主ごと愛せる稀有なタイプ。「こうあるべき」より「あなたのままでいい」。</p>
+<p>ただし、自分のことを後回しにしがち。自分の気持ちを大切にすることは、相手を大切にすることと矛盾しません。</p>
+<p><strong>相性の良い運命数：</strong>6（お互いに尽くし合える）、3（人生を明るく照らしてくれる）</p>
+
+</div>
+
+<div class="cta">
+🔮 星座×運命数の組み合わせで108タイプに分類<br>
+<a href="#">→ あなただけの恋愛タイプを無料診断</a>
+</div>
+</div>
+
+<!-- ========================================== -->
+<!-- ARTICLE 4: 有料 — 相性マトリクス -->
+<!-- ============================================================ -->
+<div class="divider">☽ ✦ ☽</div>
+
+<div class="card" id="a4">
+<div class="meta">
+<span class="tag paid">有料記事 ¥500</span>
+<span class="tag">#相性</span>
+<span class="tag">#108タイプ</span>
+<span class="tag">#完全版</span>
+</div>
+
+<h3 class="article-title">【保存版】全108タイプ・恋愛相性マトリクス</h3>
+<p class="article-subtitle">— あなたと「あの人」の星座×数秘を照らし合わせる</p>
+
+<div class="body">
+
+<p>ここまでの記事で、星座×数秘術による108タイプの恋愛パターンをお伝えしてきました。</p>
+
+<p>この記事では、いよいよ108タイプ同士の「相性」を読み解きます。</p>
+
+<p>相性は単なる「合う・合わない」ではありません。すべての組み合わせに、固有のテーマと成長のヒントがあります。こよみ。の相性診断は以下の4つの軸で評価します。</p>
+
+<h3>相性を読む4つの軸</h3>
+
+<h4>① 引力（惹かれ合う力）★★★★★</h4>
+<p>出会った瞬間の化学反応。第一印象で「この人、気になる」と感じるかどうか。星座のエレメント（火・地・風・水）の組み合わせが大きく影響します。</p>
+
+<h4>② 調和（日常の心地よさ）★★★★★</h4>
+<p>一緒にいるときの居心地。価値観のズレが少なく、リラックスできるか。運命数の相性がここに強く出ます。</p>
+
+<h4>③ 成長（互いを高め合う力）★★★★★</h4>
+<p>この人と一緒にいると成長できるか。違いがあるからこそ学び合える組み合わせもあれば、似すぎて停滞する組み合わせもあります。</p>
+
+<h4>④ 持続力（長期的な安定度）★★★★★</h4>
+<p>3年後、5年後も一緒にいるイメージが湧くか。星座の固定宮・活動宮・柔軟宮のバランスと、運命数のリズムの合致度で判定します。</p>
+
+<h3>エレメント相性の基本法則</h3>
+
+<p>まず大きな傾向として、星座のエレメント同士の相性があります。</p>
+
+<h4>最も自然な組み合わせ</h4>
+<p>火×風（情熱×知性 → 燃え上がる）、地×水（安定×感情 → 深まる）</p>
+
+<h4>刺激的だが難しい組み合わせ</h4>
+<p>火×水（蒸発か温泉か）、地×風（束縛vs自由）</p>
+
+<h4>似た者同士の組み合わせ</h4>
+<p>火×火（パワフルだが衝突も）、水×水（深いが溺れることも）</p>
+
+</div>
+
+<div class="paywall">
+<div class="paywall-label">☽ ここから有料エリア ☽</div>
+<div class="paywall-price">¥500</div>
+<p style="font-size:.78rem;color:var(--dim);margin-top:.5rem">以下の内容が含まれます：</p>
+</div>
+
+<div class="body" style="opacity:.6">
+
+<h3>[有料部分の構成]</h3>
+<ul>
+<li><strong>火の星座×各運命数（27パターン）の詳細相性：</strong>牡羊座・獅子座・射手座それぞれの運命数1〜9が、各エレメントの相手とどう響き合うか</li>
+<li><strong>地の星座×各運命数（27パターン）の詳細相性：</strong>牡牛座・乙女座・山羊座の組み合わせ</li>
+<li><strong>風の星座×各運命数（27パターン）の詳細相性：</strong>双e��座・天秤座・水瓶座の組み合わせ</li>
+<li><strong>水の星座×各運命数（27パターン）の詳細相性：</strong>蟹座・蠍座ヽ魚座の組み合わせ</li>
+<li><strong>「最高の相性」ベスト10：</strong>108タイプの中で特に化学反応が起きやすい組み合わせ</li>
+<li><strong>〈要注意の相性」ワースト10と対処法：</strong>衝突しやすいけれど乗り越え方がわかれば最強になれる組み合わせ</li>
+<li><strong>相性別・関係を深めるための具体的アドバイス</strong></li>
+</ul>
+
+<p style="color:var(--rose);font-style:italic;text-align:center;margin-top:1.5rem">（本編は約12,000字。108タイプすべてのクロスリファレンスを収録）</p>
+
+</div>
+
+<div class="cta">
+まずは自分のタイプを確認 → <a href="#">無料タイプ診断</a>
+</div>
+</div>
+
+<!-- ========================================== -->
+<!-- ARTICLE 5: 有料 — 運命の出会いカレンダー -->
+<!-- ========================================== -->
+<div class="divider">☽ ✦ ☽</div>
+
+<div class="card" id="a5">
+<div class="meta">
+<span class="tag paid">有料記事 ¥500</span>
+<span class="tag">#2026年下半期</span>
+<span class="tag">#運勢</span>
+<span class="tag">#出会い</span>
+</div>
+
+<h3 class="article-title">2026年下半期・星座×数秘で読む「運命の出会いカレンダー」</h3>
+<p class="article-subtitle">— 7月〜12月、あなたに訪れる恋のタイミング</p>
+
+<div class="body">
+
+<p>占いの真の価値は「いつ動くべきか」を教えてくれること。</p>
+
+<p>2026年下半期は、木星が双子座から蟹座へ移行する大きな転換期。恋愛運に直結する金星の動きも見逃せません。この記事では、星座×数秘術の視点から、108タイプそれぞれの「恋のベストタイミング」を月別でお伝えします。</p>
+
+<h3>2026年下半期の天体イベント（恋愛関連）</h3>
+
+<h4>大きな流れ</h4>
+<p>木星の蟹座入り（6月末〜）により、水の星座（蟹座・荍座・魚座）を中心に「人とのご縁」が活性化。特に蟹座は12年に一度の大チャンス年。一方、火の星座は試練と成長の時期に入ります。</p>
+
+<h4>金星の動き</h4>
+<p>7月：獅子座 → 8月：乙女座 → 9月：天秤座 → 10月：蠍座 → 11月：射手座 → 12月：山羊座。金星が自分の星座を通過するタイミングが、恋愛運ピークの基本です。</p>
+
+<h3>7月 — 火と情熱の月</h3>
+
+<p>金星獅子座が恋のムードを盛り上げます。特に火の星座（牡羊座・獅子座・射手座）は積極的に動くべき月。</p>
+
+<p>数秘的には「7月 = 数字の7 = 内省と発見」。出会いの場に行くだけでなく、「自分が本当に求めているもの」を見つめ直す時間も大切にしましょう。</p>
+
+</div>
+
+<div class="paywall">
+<div class="paywall-label">☽ ここから有料エリア ☽</div>
+<div class="paywall-price">¥500</div>
+<p style="font-size:.78rem;color:var(--dim);margin-top:.5rem">以下の内容が含まれます：</p>
+</div>
+
+<div class="body" style="opacity:.6">
+
+<h3>[有料部分の構成]</h3>
+<ul>
+<li><strong>7月〜12月の月別詳細運勢：</strong>各月の天体配置と、12星座 × 9運命数ごとの恋愛運ハイライト</li>
+<li><strong>月別「出会いの場所」ガイド：</strong>タイプ別に最も出会いの確燇が高い場所・シチュエーション</li>
+<li><strong>108タイプ別・下半期ベストデー：</strong>あなたのタイプが最も輝く「運命の日」をピンポイントで特定</li>
+<li><strong>新月・満月の恋愛リチュアル：</strong>月の満ち欠けに合わせた恋愛運アップのおまじない</li>
+<li><strong>年月に向けての恋愛戦略：</strong>クリスマス�'5ntぴぴ年る月年始の過ごし方で年2027年の恋が湧まる</li>
+<li><strong>タイプ別・2027年への架け橋：</strong>来年に向けて今からできる㭺備</li>
+</ul>
+
+<p style="color:var(--rose);font-style:italic;text-align:center;margin-top:1.5rem">（本編は約10,000字。カレンダー形式＋タイプ別アドバイスを収雂）</p>
+
+</div>
+
+<div class="cta">
+あなたの108タイプを知ってから読むと効果2倍 → <a href="#">無料タイプ診断</a>
+</div>
+</div>
+
+<!-- ========================================== -->
+<!-- Note運用ガイド -->
+<!-- ========================================== -->
+<div class="divider">☽ ✦ ☽</div>
+
+<h2>Note運用ガイド</h2>
+
+<div class="card">
+<h4 style="font-family:'Shippori Mincho',serif;color:var(--gold);margin-bottom:.8rem">アカウント設定</h4>
+<div style="font-size:.85rem">
+<p style="margin-bottom:.4rem"><strong>表示名：</strong>こよみ。＜星座×数秘タイプ占い</p>
+<p style="margin-bottom:.4rem"><strong>アイコン：</strong>profile-koyomi.jpg（Xと統一）</p>
+<p style="margin-bottom:.4rem"><strong>ヘッダー：</strong>header-koyomi.jpg（Xと統一）</p>
+<p style="margin-bottom:.4rem"><strong>自己紹介：</strong>星座×数秘術を組み合わせた独自メソッド「こよみ星読み」で、あなたの恋愛パターンを108タイプに分類。無料タイプ診断→[URL] / X→@koyomi_uranai / LINE公式→[URL]</p>
+</div>
+</div>
+
+<div class="card">
+<h4 style="font-family:'Shippori Mincho',serif;color:var(--gold);margin-bottom:.8rem">投稿スケジュール</h4>
+<div style="font-size:.85rem">
+<p style="margin-bottom:.4rem"><strong>Week 1：</strong>記事#01（無料）公開 → Xで告知</p>
+<p style="margin-bottom:.4rem"><strong>Week 2：</strong>記事#02（無料）公開 → Xで告知 + 記事#01のリマインド</p>
+<p style="margin-bottom:.4rem"><strong>Week 3：</strong>記事#03（無料）CTA強化</p>
+<p style="margin-bottom:.4rem"><strong>Week 4：</strong>記事#04（有料¥500）公開 → 無料記事から誘導</p>
+<p style="margin-bottom:.4rem"><strong>Month 2：</strong>記事#05（有料¥500）公開 → 季節記事として定期更新</p>
+</div>
+</div>
+
+<div class="card">
+<h4 style="font-family:'Shippori Mincho',serif;color:var(--gold);margin-bottom:.8rem">収益シミュレーション</h4>
+<div style="font-size:.85rem">
+<p style="margin-bottom:.4rem"><strong>Month 1（フォロワー300人想定）：</strong>有料記事購入率3% → 9人 × ¥500 = ¥4,500</p>
+<p style="margin-bottom:.4rem"><strong>Month 3（フォロワー1,000人想定）：</strong>有料記事購入率5% → 50人 × ¥500 = ¥25,000</p>
+<p style="margin-bottom:.4rem"><strong>Month 6（フォロワー3,000人想定）：</strong>有料記事購入率5% × 累計5本 → ¥50,000〜¥75,000/月</p>
+<p style="margin-bottom:.8rem"><strong>重要：</strong>有料記事は「ストック型収益」。一度書けば継続的に売れるため、記事数が増えるほど月収が安定します。</p>
+</div>
+</div>
+
+<div class="footer">
+こよみ。Note記事コレクション — 全5本（無料3本 + 有料2本）<br>
+関連ファイル：x-master-content.html / diagnosis-site/index.html / line-official-setup/setup-guide.html
+</div>
+
+</div>
+</body>
+</html>
