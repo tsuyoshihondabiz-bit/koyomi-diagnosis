@@ -27,8 +27,8 @@ export default function DiagnosisForm({ onSubmit }: DiagnosisFormProps) {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-sm mx-auto space-y-5">
       <div>
-        <label htmlFor="nickname" className="block text-xs text-text-dim mb-1.5 tracking-wider">
-          ニックネーム
+        <label htmlFor="nickname" className="block text-xs text-gold-dim mb-2 tracking-wider font-serif">
+          <span className="text-gold mr-1">★</span>おなまえ<span className="text-rose-pale text-[10px] ml-2">必須</span>
         </label>
         <input
           type="text"
@@ -36,15 +36,15 @@ export default function DiagnosisForm({ onSubmit }: DiagnosisFormProps) {
           value={nickname}
           onChange={(e) => setNickname(e.target.value)}
           maxLength={20}
-          placeholder="例：さくら"
+          placeholder="あなたの名前を入力してください"
           required
-          className="w-full px-4 py-3 rounded-lg bg-bg-input border border-white/5 text-text placeholder:text-text-dim/40 focus:outline-none focus:border-gold/30 transition-colors text-sm"
+          className="w-full px-4 py-3.5 rounded-xl bg-bg-input border border-gold/15 text-text placeholder:text-text-dim/30 focus:outline-none focus:border-gold/40 focus:shadow-[0_0_15px_rgba(201,168,76,0.1)] transition-all text-sm"
         />
       </div>
 
       <div>
-        <label htmlFor="birthday" className="block text-xs text-text-dim mb-1.5 tracking-wider">
-          生年月日
+        <label htmlFor="birthday" className="block text-xs text-gold-dim mb-2 tracking-wider font-serif">
+          <span className="text-gold mr-1">★</span>生年月日<span className="text-rose-pale text-[10px] ml-2">必須</span>
         </label>
         <input
           type="date"
@@ -54,16 +54,18 @@ export default function DiagnosisForm({ onSubmit }: DiagnosisFormProps) {
           min="1940-01-01"
           max="2010-12-31"
           required
-          className="w-full px-4 py-3 rounded-lg bg-bg-input border border-white/5 text-text focus:outline-none focus:border-gold/30 transition-colors text-sm"
+          className="w-full px-4 py-3.5 rounded-xl bg-bg-input border border-gold/15 text-text focus:outline-none focus:border-gold/40 focus:shadow-[0_0_15px_rgba(201,168,76,0.1)] transition-all text-sm"
         />
       </div>
 
-      <button type="submit" className="btn-gold w-full py-4 text-sm cursor-pointer tracking-wider">
-        暦占術で診断する
-      </button>
+      <div className="pt-2">
+        <button type="submit" className="btn-gold w-full py-5 text-lg cursor-pointer">
+          無料で占う
+        </button>
+      </div>
 
-      <p className="text-text-dim/40 text-[10px] text-center tracking-wider">
-        無料・登録不要・30秒で完了
+      <p className="text-text-dim/30 text-[10px] text-center tracking-wider">
+        ※ 個人情報はブラウザ内のみに保存され、サーバーには送信されません
       </p>
     </form>
   );

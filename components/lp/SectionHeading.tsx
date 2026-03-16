@@ -1,25 +1,28 @@
 interface SectionHeadingProps {
   title: string;
   subtitle?: string;
-  align?: 'center' | 'left';
+  ornament?: boolean;
 }
 
-export default function SectionHeading({ title, subtitle, align = 'center' }: SectionHeadingProps) {
-  const alignClass = align === 'center' ? 'text-center' : 'text-left';
-
+export default function SectionHeading({ title, subtitle, ornament = true }: SectionHeadingProps) {
   return (
-    <div className={`${alignClass} mb-12`}>
-      <h2 className="font-serif text-gold text-xl sm:text-2xl font-bold tracking-wide">
+    <div className="section-heading">
+      {ornament && (
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <span className="sparkle-star text-[8px]" style={{ animationDelay: '0s' }}>✦</span>
+          <span className="w-12 h-px bg-gradient-to-r from-transparent to-gold/40" />
+          <span className="text-gold/40 text-xs">☽</span>
+          <span className="w-12 h-px bg-gradient-to-l from-transparent to-gold/40" />
+          <span className="sparkle-star text-[8px]" style={{ animationDelay: '1s' }}>✦</span>
+        </div>
+      )}
+      <h2 className="section-heading__title">
         {title}
       </h2>
       {subtitle && (
-        <p className="font-display italic text-text-dim/50 text-[11px] sm:text-xs tracking-[0.25em] mt-2 uppercase">
-          {subtitle}
-        </p>
+        <span className="section-heading__sub">{subtitle}</span>
       )}
-      <div
-        className={`mt-4 h-px max-w-[60px] bg-gold/40 ${align === 'center' ? 'mx-auto' : ''}`}
-      />
+      <span className="section-heading__rule" />
     </div>
   );
 }

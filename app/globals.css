@@ -1,31 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #080810;
-  --bg-card: #0f0f1a;
-  --bg-input: #141425;
+  /* ─── Base Palette ─── */
+  --bg: #0a0e2a;
+  --bg-deep: #060920;
+  --bg-card: rgba(12, 16, 45, 0.85);
+  --bg-input: #0d1235;
+  --bg-warm: #12163a;
+
+  /* ─── Gold System ─── */
   --gold: #c9a84c;
   --gold-bright: #e8cc6a;
   --gold-dim: #8a7333;
-  --text: #d4d4e0;
-  --text-dim: #6a6a88;
-  --mystic: #6b5b95;
+  --gold-pale: #f5e6b8;
+  --gold-glow: rgba(201, 168, 76, 0.3);
+
+  /* ─── Accent Colors ─── */
+  --mystic: #7b6baf;
+  --mystic-deep: #4a3d7a;
   --rose: #c06c84;
+  --rose-pale: #e8a0b4;
+  --celestial: #3d5a9e;
+  --celestial-light: #5a7ec2;
+  --cream: #f5f0e0;
+  --cream-dim: #d4cbb8;
+
+  /* ─── Text ─── */
+  --text: #e8e4f0;
+  --text-dim: #8888aa;
+  --text-warm: #d4cbb8;
+
+  /* ─── Utility ─── */
   --teal: #4db6ac;
   --line-green: #06c755;
 }
 
 @theme inline {
   --color-bg: var(--bg);
+  --color-bg-deep: var(--bg-deep);
   --color-bg-card: var(--bg-card);
   --color-bg-input: var(--bg-input);
+  --color-bg-warm: var(--bg-warm);
   --color-gold: var(--gold);
   --color-gold-bright: var(--gold-bright);
   --color-gold-dim: var(--gold-dim);
+  --color-gold-pale: var(--gold-pale);
   --color-text: var(--text);
   --color-text-dim: var(--text-dim);
+  --color-text-warm: var(--text-warm);
   --color-mystic: var(--mystic);
+  --color-mystic-deep: var(--mystic-deep);
   --color-rose: var(--rose);
+  --color-rose-pale: var(--rose-pale);
+  --color-celestial: var(--celestial);
+  --color-celestial-light: var(--celestial-light);
+  --color-cream: var(--cream);
+  --color-cream-dim: var(--cream-dim);
   --color-teal: var(--teal);
   --color-line-green: var(--line-green);
   --font-serif: var(--font-shippori);
@@ -41,39 +71,43 @@ body {
   overflow-x: hidden;
 }
 
-/* Star field */
-.star {
-  position: absolute;
-  border-radius: 50%;
-  background: #ffffff;
-  animation: twinkle var(--duration, 3s) ease-in-out infinite;
-  opacity: 0;
-}
+/* ══════════════════════════════════════
+   ANIMATIONS
+   ══════════════════════════════════════ */
 
 @keyframes twinkle {
-  0%, 100% { opacity: 0.1; }
-  50% { opacity: var(--max-opacity, 0.8); }
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: var(--max-opacity, 0.9); }
 }
 
-/* Moon float */
 @keyframes moonFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
 
-/* Orb float */
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  animation: orbFloat 12s ease-in-out infinite;
-  pointer-events: none;
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
-@keyframes orbFloat {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(20px, -30px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gentleRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(201,168,76,0.2), 0 0 40px rgba(201,168,76,0.1); }
+  50% { box-shadow: 0 0 30px rgba(201,168,76,0.4), 0 0 60px rgba(201,168,76,0.2); }
 }
 
 /* Dot pulse loading */
@@ -85,7 +119,6 @@ body {
   background: var(--gold);
   animation: dotPulse 1.4s ease-in-out infinite;
 }
-
 .dot-pulse:nth-child(2) { animation-delay: 0.2s; }
 .dot-pulse:nth-child(3) { animation-delay: 0.4s; }
 
@@ -94,15 +127,37 @@ body {
   40% { transform: scale(1); opacity: 1; }
 }
 
-/* Gold button sweep */
+/* ══════════════════════════════════════
+   ORNATE GOLD BUTTON
+   (参考: mimiko, 村野弘味のゴールド装飾ボタン)
+   ══════════════════════════════════════ */
+
 .btn-gold {
-  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
-  color: var(--bg);
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright), var(--gold));
+  background-size: 200% 100%;
+  color: #0a0e2a;
   font-weight: 700;
-  border-radius: 8px;
+  font-family: var(--font-serif);
+  letter-spacing: 0.1em;
+  border-radius: 50px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 2px solid var(--gold-bright);
+  box-shadow:
+    0 4px 20px rgba(201,168,76,0.3),
+    0 0 40px rgba(201,168,76,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.2);
+  pointer-events: none;
 }
 
 .btn-gold::after {
@@ -112,129 +167,325 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  transition: left 0.5s ease-in-out;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s ease;
 }
 
 .btn-gold:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.4);
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 30px rgba(201,168,76,0.5),
+    0 0 60px rgba(201,168,76,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
 .btn-gold:hover::after {
   left: 100%;
 }
 
-/* Card hover */
-.card-hover {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+/* ══════════════════════════════════════
+   ORNATE FRAME CARD
+   (参考: 真木あかり, mimikoの装飾フレーム)
+   ══════════════════════════════════════ */
+
+.frame-card {
+  position: relative;
+  background: linear-gradient(160deg, rgba(12,16,45,0.9), rgba(20,24,60,0.85));
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 30px rgba(0,0,0,0.3),
+    0 0 40px rgba(107,107,175,0.06),
+    inset 0 1px 0 rgba(201,168,76,0.15);
+  backdrop-filter: blur(10px);
 }
 
-.card-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.15);
+.frame-card::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 13px;
+  pointer-events: none;
 }
 
-/* ─── LP Ornamental Styles ─── */
+.frame-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(201,168,76,0.2), transparent 40%, transparent 60%, rgba(201,168,76,0.15));
+  pointer-events: none;
+  z-index: -1;
+}
 
-/* Ornamental section divider */
+/* ══════════════════════════════════════
+   CORNER ORNAMENTS
+   ══════════════════════════════════════ */
+
+.corner-ornament { position: relative; }
+
+.corner-ornament::before {
+  content: '✦';
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  color: var(--gold);
+  font-size: 8px;
+  opacity: 0.6;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.corner-ornament::after {
+  content: '✦';
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  color: var(--gold);
+  font-size: 8px;
+  opacity: 0.6;
+  animation: sparkle 3s ease-in-out infinite 1.5s;
+}
+
+/* ══════════════════════════════════════
+   ORNAMENTAL SECTION HEADING
+   (参考: mimiko, 真木あかりの見出しスタイル)
+   ══════════════════════════════════════ */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-heading__title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--gold-bright);
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 0 20px rgba(201,168,76,0.3);
+}
+
+.section-heading__title::before,
+.section-heading__title::after {
+  content: '◆';
+  position: relative;
+  font-size: 0.5em;
+  color: var(--gold-dim);
+  vertical-align: middle;
+  margin: 0 0.8em;
+  opacity: 0.7;
+}
+
+.section-heading__sub {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 0.3em;
+  opacity: 0.5;
+}
+
+.section-heading__rule {
+  display: block;
+  width: 80px;
+  height: 1px;
+  margin: 16px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  box-shadow: 0 0 8px rgba(201,168,76,0.3);
+}
+
+/* ══════════════════════════════════════
+   ORNAMENTAL DIVIDER
+   ══════════════════════════════════════ */
+
 .ornament-divider {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 8px 0;
+  gap: 16px;
+  padding: 12px 0;
 }
+
 .ornament-divider::before,
 .ornament-divider::after {
   content: '';
   flex: 1;
-  max-width: 120px;
+  max-width: 150px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  box-shadow: 0 0 4px rgba(201,168,76,0.2);
 }
 
-/* Decorative frame card */
-.frame-card {
-  position: relative;
-  background: linear-gradient(145deg, rgba(15,15,26,0.95), rgba(20,20,40,0.9));
-  border: 1px solid rgba(201,168,76,0.2);
-  border-radius: 12px;
-  box-shadow:
-    0 0 30px rgba(107,91,149,0.08),
-    inset 0 1px 0 rgba(201,168,76,0.1);
-}
-.frame-card::before {
-  content: '';
-  position: absolute;
-  inset: 4px;
-  border: 1px solid rgba(201,168,76,0.08);
-  border-radius: 10px;
-  pointer-events: none;
-}
+/* ══════════════════════════════════════
+   GOLD GRADIENT TEXT
+   ══════════════════════════════════════ */
 
-/* Gold gradient text */
 .text-gradient-gold {
-  background: linear-gradient(180deg, #e8cc6a 0%, #c9a84c 50%, #8a7333 100%);
+  background: linear-gradient(180deg, #f5e6b8 0%, #e8cc6a 30%, #c9a84c 60%, #8a7333 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Mystic gradient text */
 .text-gradient-mystic {
-  background: linear-gradient(180deg, #9b8ec4 0%, #6b5b95 100%);
+  background: linear-gradient(180deg, #b8a8e0 0%, #7b6baf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Section with texture overlay */
-.section-textured {
-  position: relative;
+/* ══════════════════════════════════════
+   CELESTIAL BACKGROUNDS
+   (参考: 真木あかりの星空背景)
+   ══════════════════════════════════════ */
+
+.bg-celestial-1 {
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(61,90,158,0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(123,107,175,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 60%),
+    linear-gradient(180deg, #080c24 0%, #0e1440 50%, #0a0e2a 100%);
 }
-.section-textured::before {
+
+.bg-celestial-2 {
+  background:
+    radial-gradient(ellipse at 70% 20%, rgba(123,107,175,0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 80%, rgba(192,108,132,0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #0c1030 0%, #141850 50%, #0c1030 100%);
+}
+
+.bg-celestial-3 {
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(201,168,76,0.08) 0%, transparent 40%),
+    radial-gradient(ellipse at 20% 70%, rgba(61,90,158,0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #0a0e2e 0%, #0e1238 50%, #0a0e2e 100%);
+}
+
+.bg-celestial-4 {
+  background:
+    radial-gradient(ellipse at 80% 40%, rgba(192,108,132,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 60%, rgba(123,107,175,0.1) 0%, transparent 50%),
+    linear-gradient(180deg, #0e1030 0%, #161c50 50%, #0e1030 100%);
+}
+
+/* ══════════════════════════════════════
+   SPARKLE & STAR DECORATIONS
+   ══════════════════════════════════════ */
+
+.sparkle-star {
+  display: inline-block;
+  color: var(--gold);
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.constellation-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--gold-pale);
+  box-shadow: 0 0 6px rgba(201,168,76,0.5);
+}
+
+/* ══════════════════════════════════════
+   ORNATE FORM STYLING
+   (参考: 真木あかり, mimikoのフォームスタイル)
+   ══════════════════════════════════════ */
+
+.form-ornate {
+  background: linear-gradient(160deg, rgba(14,18,50,0.95), rgba(18,22,58,0.9));
+  border: 2px solid rgba(201,168,76,0.25);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  box-shadow:
+    0 8px 40px rgba(0,0,0,0.3),
+    0 0 60px rgba(201,168,76,0.06),
+    inset 0 1px 0 rgba(201,168,76,0.15);
+}
+
+.form-ornate::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(107,91,149,0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 50%, rgba(192,108,132,0.06) 0%, transparent 50%);
+  inset: 6px;
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 16px;
   pointer-events: none;
 }
 
-/* Sparkle decoration */
-.sparkle {
-  display: inline-block;
-  animation: sparkle 2s ease-in-out infinite;
-}
-@keyframes sparkle {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
-}
+/* ══════════════════════════════════════
+   TESTIMONIAL CARD
+   ══════════════════════════════════════ */
 
-/* LP section backgrounds */
-.lp-bg-deep { background: linear-gradient(180deg, #080818 0%, #0c0c24 50%, #080818 100%); }
-.lp-bg-purple { background: linear-gradient(180deg, #0c0820 0%, #140e30 50%, #0c0820 100%); }
-.lp-bg-warm { background: linear-gradient(180deg, #0e0c14 0%, #1a1420 50%, #0e0c14 100%); }
-.lp-bg-ocean { background: linear-gradient(180deg, #080c18 0%, #0c1028 50%, #080c18 100%); }
-
-/* Corner ornaments */
-.corner-ornament {
+.testimonial-card {
+  background: linear-gradient(160deg, rgba(14,18,50,0.8), rgba(20,24,58,0.7));
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
   position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
-.corner-ornament::before,
-.corner-ornament::after {
-  content: '✦';
-  position: absolute;
-  color: var(--gold-dim);
-  font-size: 10px;
-  opacity: 0.5;
-}
-.corner-ornament::before { top: 8px; left: 12px; }
-.corner-ornament::after { bottom: 8px; right: 12px; }
 
-/* Glow heading underline */
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -5px;
+  left: 16px;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--gold-dim);
+  opacity: 0.4;
+  line-height: 1;
+}
+
+/* ══════════════════════════════════════
+   PROFILE FRAME
+   (参考: 村野弘味の写真フレーム装飾)
+   ══════════════════════════════════════ */
+
+.profile-frame {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-frame::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  opacity: 0.4;
+  animation: gentleRotate 20s linear infinite;
+}
+
+.profile-frame::after {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  border: 1px dashed var(--gold-dim);
+  opacity: 0.2;
+  animation: gentleRotate 30s linear infinite reverse;
+}
+
+/* ══════════════════════════════════════
+   MISC UTILITIES
+   ══════════════════════════════════════ */
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(201,168,76,0.15);
+}
+
 .heading-glow {
   position: relative;
   display: inline-block;
@@ -251,26 +502,29 @@ body {
   box-shadow: 0 0 12px rgba(201,168,76,0.4);
 }
 
-/* Number badge */
 .num-badge {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 18px;
-  background: linear-gradient(145deg, #c9a84c, #8a7333);
-  color: #080810;
-  box-shadow: 0 2px 10px rgba(201,168,76,0.3);
+  font-family: var(--font-serif);
+  background: linear-gradient(145deg, #e8cc6a, #c9a84c, #8a7333);
+  color: #0a0e2a;
+  box-shadow:
+    0 4px 15px rgba(201,168,76,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .star, .orb, .dot-pulse {
+  .star, .orb, .dot-pulse, .sparkle-star, .profile-frame::before, .profile-frame::after {
     animation: none !important;
   }
-  .star { opacity: 0.4; }
   .dot-pulse { opacity: 1; transform: scale(1); }
+  .btn-gold { animation: none; }
 }
