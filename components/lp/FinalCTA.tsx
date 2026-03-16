@@ -13,19 +13,18 @@ export default function FinalCTA() {
 
       <div className="relative z-10 max-w-lg mx-auto text-center">
         {/* Decorative moon */}
-        <div className="text-4xl text-gold/30 mb-6" style={{ animation: 'moonFloat 6s ease-in-out infinite' }}>
+        <div className="text-4xl text-gold/25 mb-6" style={{ animation: 'moonFloat 6s ease-in-out infinite' }}>
           ☽
         </div>
 
         {/* Ornamental frame */}
         <div className="frame-card corner-ornament p-8 sm:p-12"
-             style={{ boxShadow: '0 0 60px rgba(201,168,76,0.1)' }}>
+             style={{ boxShadow: '0 0 60px rgba(184,150,62,0.08)' }}>
           <div className="ornament-divider mb-4">
-            <span className="text-gold/30 text-[8px]">✧</span>
+            <span className="text-gold/25 text-[8px]">✧</span>
           </div>
 
-          <p className="font-serif text-gradient-gold text-2xl sm:text-3xl font-bold mb-2 leading-[1.6]"
-             style={{ textShadow: '0 0 20px rgba(201,168,76,0.2)' }}>
+          <p className="font-serif text-gradient-gold text-2xl sm:text-3xl font-bold mb-2 leading-[1.6]">
             あなたの運命の扉を、<br />今ここで開く。
           </p>
           <p className="text-text-dim text-xs mb-8 tracking-wider leading-relaxed">
@@ -40,7 +39,7 @@ export default function FinalCTA() {
           </button>
 
           <div className="ornament-divider mt-6">
-            <span className="text-gold/20 text-[8px]">✧</span>
+            <span className="text-gold/15 text-[8px]">✧</span>
           </div>
         </div>
       </div>

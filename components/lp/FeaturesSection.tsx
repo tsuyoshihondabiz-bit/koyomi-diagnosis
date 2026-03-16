@@ -25,9 +25,9 @@ const FEATURES = [
 ];
 
 const ACCENT_COLORS: Record<string, { border: string; glow: string; text: string }> = {
-  gold: { border: 'border-gold/30', glow: 'rgba(201,168,76,0.15)', text: 'text-gold' },
-  rose: { border: 'border-rose/30', glow: 'rgba(192,108,132,0.15)', text: 'text-rose-pale' },
-  mystic: { border: 'border-mystic/30', glow: 'rgba(123,107,175,0.15)', text: 'text-mystic' },
+  gold: { border: 'border-gold/25', glow: 'rgba(184,150,62,0.08)', text: 'text-gold' },
+  rose: { border: 'border-rose/25', glow: 'rgba(200,125,148,0.08)', text: 'text-rose-pale' },
+  mystic: { border: 'border-mystic/25', glow: 'rgba(139,123,184,0.08)', text: 'text-mystic' },
 };
 
 export default function FeaturesSection() {
@@ -35,9 +35,9 @@ export default function FeaturesSection() {
     <section id="features" className="relative py-20 sm:py-28 px-5 sm:px-8 bg-celestial-3 overflow-hidden">
       {/* Scattered sparkles */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <span className="sparkle-star absolute text-gold/20 text-sm top-[15%] left-[8%]">✦</span>
-        <span className="sparkle-star absolute text-mystic/20 text-xs top-[40%] right-[12%]" style={{ animationDelay: '1s' }}>✧</span>
-        <span className="sparkle-star absolute text-gold/15 text-sm bottom-[20%] left-[15%]" style={{ animationDelay: '1.5s' }}>✦</span>
+        <span className="sparkle-star absolute text-gold/25 text-sm top-[15%] left-[8%]">✦</span>
+        <span className="sparkle-star absolute text-mystic/25 text-xs top-[40%] right-[12%]" style={{ animationDelay: '1s' }}>✧</span>
+        <span className="sparkle-star absolute text-gold/20 text-sm bottom-[20%] left-[15%]" style={{ animationDelay: '1.5s' }}>✦</span>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -63,7 +63,7 @@ export default function FeaturesSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="font-serif text-gold-bright text-base font-bold mb-3">
+                <h3 className="font-serif text-gold text-base font-bold mb-3">
                   {feature.title}
                 </h3>
 

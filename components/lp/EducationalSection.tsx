@@ -5,7 +5,7 @@ export default function EducationalSection() {
   return (
     <section className="relative py-20 sm:py-28 px-5 sm:px-8 bg-celestial-2 overflow-hidden">
       {/* Decorative watermark */}
-      <div className="absolute top-[20%] right-[-5%] pointer-events-none select-none opacity-[0.015]" aria-hidden="true">
+      <div className="absolute top-[20%] right-[-5%] pointer-events-none select-none opacity-[0.03]" aria-hidden="true">
         <span className="font-serif text-[12rem] text-gold font-bold">数</span>
       </div>
 
@@ -17,7 +17,7 @@ export default function EducationalSection() {
 
         {/* Intro text in frame */}
         <div className="frame-card p-6 sm:p-8 mb-12 max-w-2xl mx-auto">
-          <p className="text-text/80 text-sm leading-[2] mb-4">
+          <p className="text-text/70 text-sm leading-[2] mb-4">
             数秘術（ヌメロロジー）は、古代ギリシャの数学者ピタゴラスが体系化した占術です。
             「万物は数なり」という思想のもと、生年月日から導かれる1〜9の運命数があなたの本質を表します。
           </p>
@@ -30,10 +30,10 @@ export default function EducationalSection() {
 
         {/* Pythagoras quote */}
         <div className="text-center mb-12">
-          <p className="font-display italic text-gold/30 text-base sm:text-lg tracking-wider">
+          <p className="font-display italic text-gold/40 text-base sm:text-lg tracking-wider">
             &ldquo;All is Number&rdquo;
           </p>
-          <p className="text-text-dim/30 text-[10px] tracking-[0.3em] mt-1">— PYTHAGORAS</p>
+          <p className="text-text-dim/40 text-[10px] tracking-[0.3em] mt-1">&mdash; PYTHAGORAS</p>
         </div>
 
         {/* Numbers grid */}
@@ -45,7 +45,7 @@ export default function EducationalSection() {
             >
               <div className="flex items-center gap-4 mb-3">
                 <span className="num-badge">{item.num}</span>
-                <h3 className="font-serif text-gold-bright text-base font-bold">
+                <h3 className="font-serif text-gold text-base font-bold">
                   {item.title}
                 </h3>
               </div>

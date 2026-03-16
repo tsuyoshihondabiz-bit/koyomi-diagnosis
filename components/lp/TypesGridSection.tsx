@@ -34,7 +34,7 @@ export default function TypesGridSection() {
               {/* Zodiac header with ornamental line */}
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-gold text-xl">{ZODIAC_SYMBOLS[zodiac]}</span>
-                <h3 className="font-serif text-gold-bright text-base font-bold tracking-wider">
+                <h3 className="font-serif text-gold text-base font-bold tracking-wider">
                   {zodiac}
                 </h3>
                 <span className="flex-1 h-px bg-gradient-to-r from-gold/20 to-transparent" />
@@ -49,10 +49,10 @@ export default function TypesGridSection() {
                     onClick={() => router.push(`/result/${type.id}`)}
                     className="py-3 px-1.5 text-center rounded-lg border border-gold/10 hover:border-gold/30 transition-all cursor-pointer group"
                     style={{
-                      background: 'linear-gradient(160deg, rgba(14,18,50,0.6), rgba(20,24,58,0.4))',
+                      background: 'linear-gradient(160deg, rgba(255,255,255,0.7), rgba(251,247,240,0.5))',
                     }}
                   >
-                    <p className="text-text/60 text-[10px] sm:text-xs font-bold truncate group-hover:text-gold-bright transition-colors">
+                    <p className="text-text/60 text-[10px] sm:text-xs font-bold truncate group-hover:text-gold transition-colors">
                       {type.typeName}
                     </p>
                     <p className="text-text-dim/30 text-[9px] mt-0.5">
@@ -70,7 +70,7 @@ export default function TypesGridSection() {
             <button
               onClick={() => setShowAll(true)}
               className="frame-card px-10 py-4 text-gold text-sm hover:border-gold/40 transition-all cursor-pointer tracking-wider"
-              style={{ boxShadow: '0 0 20px rgba(201,168,76,0.08)' }}
+              style={{ boxShadow: '0 0 20px rgba(184,150,62,0.06)' }}
             >
               <span className="sparkle-star text-[8px] mr-2">✦</span>
               もっと見る（残り9星座）

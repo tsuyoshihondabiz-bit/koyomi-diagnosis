@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
             >
               <div className="flex items-start gap-4">
                 <div className="flex-1">
-                  <p className={`text-text/80 leading-[2] mb-4 ${i === 0 ? 'text-base font-serif' : 'text-sm'}`}>
+                  <p className={`text-text/70 leading-[2] mb-4 ${i === 0 ? 'text-base font-serif' : 'text-sm'}`}>
                     {t.text}
                   </p>
                   <div className="flex items-center gap-3">
@@ -53,7 +53,7 @@ export default function TestimonialsSection() {
           <div className="ornament-divider mb-3">
             <span className="text-gold/20 text-[8px]">✧</span>
           </div>
-          <p className="text-text-dim/40 text-xs tracking-wider">
+          <p className="text-text-dim/50 text-xs tracking-wider">
             <span className="sparkle-star text-[8px] mr-1">✦</span>
             累計
             <span className="text-gold mx-1 font-bold">50,000</span>

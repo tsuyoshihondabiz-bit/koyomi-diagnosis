@@ -35,18 +35,18 @@ export default function HeroSection() {
 
       {/* Decorative zodiac ring - top right */}
       <div
-        className="absolute -top-20 -right-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full border border-gold/5 opacity-30 pointer-events-none"
+        className="absolute -top-20 -right-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full border border-gold/10 opacity-30 pointer-events-none"
         aria-hidden="true"
         style={{ animation: 'gentleRotate 60s linear infinite' }}
       >
-        <div className="absolute inset-4 rounded-full border border-dashed border-gold/8" />
-        <div className="absolute top-1/2 left-0 w-2 h-2 rounded-full bg-gold/30 -translate-y-1/2" />
-        <div className="absolute top-0 left-1/2 w-2 h-2 rounded-full bg-gold/20 -translate-x-1/2" />
+        <div className="absolute inset-4 rounded-full border border-dashed border-gold/10" />
+        <div className="absolute top-1/2 left-0 w-2 h-2 rounded-full bg-gold/20 -translate-y-1/2" />
+        <div className="absolute top-0 left-1/2 w-2 h-2 rounded-full bg-gold/15 -translate-x-1/2" />
       </div>
 
       {/* Decorative moon - bottom left */}
       <div
-        className="absolute bottom-[10%] left-[5%] text-[80px] sm:text-[120px] text-gold/8 pointer-events-none select-none"
+        className="absolute bottom-[10%] left-[5%] text-[80px] sm:text-[120px] text-gold/10 pointer-events-none select-none"
         aria-hidden="true"
         style={{ animation: 'moonFloat 8s ease-in-out infinite' }}
       >
@@ -68,16 +68,15 @@ export default function HeroSection() {
 
             {/* Main title - large ornate */}
             <h1 className="font-serif font-bold leading-[1.2] mb-6">
-              <span className="block text-gradient-gold text-[2.8rem] sm:text-[3.6rem] lg:text-[4.2rem]"
-                    style={{ textShadow: '0 0 40px rgba(201,168,76,0.2)' }}>
+              <span className="block text-gradient-gold text-[2.8rem] sm:text-[3.6rem] lg:text-[4.2rem]">
                 暦占術
               </span>
-              <span className="block text-text/70 text-lg sm:text-xl mt-1 font-normal tracking-wider">
+              <span className="block text-text/60 text-lg sm:text-xl mt-1 font-normal tracking-wider">
                 星座×数秘で導く、あなただけの
               </span>
               <span className="block mt-1">
                 <span className="text-gradient-gold text-3xl sm:text-4xl">108</span>
-                <span className="text-text/70 text-lg sm:text-xl font-normal">通りの恋愛パターン</span>
+                <span className="text-text/60 text-lg sm:text-xl font-normal">通りの恋愛パターン</span>
               </span>
             </h1>
 
@@ -87,7 +86,7 @@ export default function HeroSection() {
             </div>
 
             {/* Description */}
-            <p className="text-text/60 text-sm leading-[2] mb-8 max-w-md mx-auto lg:mx-0">
+            <p className="text-text/50 text-sm leading-[2] mb-8 max-w-md mx-auto lg:mx-0">
               暦占術師・暦（こよみ）が、西洋占星術の12星座と<br className="hidden sm:inline" />
               古代ギリシャ数秘術を独自に融合。<br className="hidden sm:inline" />
               あなたの恋愛パターン・相性・運命のパートナーを鑑定します。
@@ -98,9 +97,9 @@ export default function HeroSection() {
               {['完全無料', '30秒で鑑定', '登録不要'].map((badge, i) => (
                 <span
                   key={i}
-                  className="flex items-center gap-2 text-xs text-gold-dim border border-gold/15 rounded-full px-4 py-2"
+                  className="flex items-center gap-2 text-xs text-gold-dim border border-gold/15 rounded-full px-4 py-2 bg-white/50"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold/50" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40" />
                   {badge}
                 </span>
               ))}
@@ -109,7 +108,7 @@ export default function HeroSection() {
             {/* Social proof */}
             <div className="flex items-center justify-center lg:justify-start gap-3 mt-4">
               <span className="w-12 h-px bg-gradient-to-r from-transparent to-gold/20" />
-              <p className="text-text-dim/50 text-xs tracking-wider">
+              <p className="text-text-dim/60 text-xs tracking-wider">
                 累計鑑定者数
                 <span className="text-gold mx-1 font-bold text-sm">50,000</span>
                 人突破
@@ -125,7 +124,7 @@ export default function HeroSection() {
               <div className="text-center mb-6">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <span className="w-8 h-px bg-gradient-to-r from-transparent to-gold/30" />
-                  <span className="text-gold/50 text-sm" style={{ animation: 'moonFloat 6s ease-in-out infinite' }}>☽</span>
+                  <span className="text-gold/40 text-sm" style={{ animation: 'moonFloat 6s ease-in-out infinite' }}>☽</span>
                   <span className="w-8 h-px bg-gradient-to-l from-transparent to-gold/30" />
                 </div>
                 <p className="font-serif text-gradient-gold text-xl font-bold">
@@ -148,8 +147,8 @@ export default function HeroSection() {
 
       {/* Bottom ornamental border */}
       <div className="absolute bottom-0 left-0 right-0">
-        <div className="h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-        <div className="h-px mt-1 bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
+        <div className="h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+        <div className="h-px mt-1 bg-gradient-to-r from-transparent via-gold/8 to-transparent" />
       </div>
     </section>
   );

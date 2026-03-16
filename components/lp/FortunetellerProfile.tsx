@@ -6,8 +6,8 @@ export default function FortunetellerProfile() {
     <section id="fortune-teller" className="relative py-20 sm:py-28 px-5 sm:px-8 bg-celestial-4 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <span className="sparkle-star absolute text-gold/15 text-lg top-[10%] right-[10%]" style={{ animationDelay: '0.5s' }}>✧</span>
-        <span className="sparkle-star absolute text-mystic/15 text-sm bottom-[15%] left-[8%]" style={{ animationDelay: '2s' }}>✦</span>
+        <span className="sparkle-star absolute text-gold/20 text-lg top-[10%] right-[10%]" style={{ animationDelay: '0.5s' }}>✧</span>
+        <span className="sparkle-star absolute text-mystic/20 text-sm bottom-[15%] left-[8%]" style={{ animationDelay: '2s' }}>✦</span>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -15,9 +15,9 @@ export default function FortunetellerProfile() {
         <div className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="sparkle-star text-[8px]">✦</span>
-            <span className="w-12 h-px bg-gradient-to-r from-transparent to-gold/40" />
-            <span className="text-gold/40 text-xs">☽</span>
-            <span className="w-12 h-px bg-gradient-to-l from-transparent to-gold/40" />
+            <span className="w-12 h-px bg-gradient-to-r from-transparent to-gold/30" />
+            <span className="text-gold/30 text-xs">☽</span>
+            <span className="w-12 h-px bg-gradient-to-l from-transparent to-gold/30" />
             <span className="sparkle-star text-[8px]" style={{ animationDelay: '1s' }}>✦</span>
           </div>
           <p className="text-gold-dim text-[10px] tracking-[0.4em] uppercase">Fortune Teller</p>
@@ -29,10 +29,10 @@ export default function FortunetellerProfile() {
           <div className="text-center">
             {/* Avatar with ornate frame */}
             <div className="profile-frame inline-block mb-6">
-              <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-[3px] border-gold/50 overflow-hidden"
+              <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-[3px] border-gold/40 overflow-hidden"
                    style={{
-                     boxShadow: '0 0 40px rgba(201,168,76,0.25), 0 0 80px rgba(201,168,76,0.1), inset 0 0 20px rgba(201,168,76,0.05)',
-                     background: 'linear-gradient(145deg, rgba(245,240,224,0.1), rgba(201,168,76,0.05))',
+                     boxShadow: '0 0 40px rgba(184,150,62,0.15), 0 0 80px rgba(184,150,62,0.06)',
+                     background: 'linear-gradient(145deg, rgba(255,255,255,0.5), rgba(251,247,240,0.3))',
                    }}>
                 <Image
                   src="/images/profile.png"
@@ -47,12 +47,11 @@ export default function FortunetellerProfile() {
 
             {/* Name with ornamental styling */}
             <div className="mb-2">
-              <h2 className="font-serif text-gradient-gold text-2xl sm:text-3xl font-bold"
-                  style={{ textShadow: '0 0 30px rgba(201,168,76,0.2)' }}>
+              <h2 className="font-serif text-gradient-gold text-2xl sm:text-3xl font-bold">
                 {FORTUNE_TELLER.title}　{FORTUNE_TELLER.name}
               </h2>
             </div>
-            <p className="font-display italic text-text-dim/40 text-xs tracking-[0.3em]">
+            <p className="font-display italic text-text-dim/50 text-xs tracking-[0.3em]">
               {FORTUNE_TELLER.nameReading}
             </p>
 
@@ -61,8 +60,8 @@ export default function FortunetellerProfile() {
               {FORTUNE_TELLER.specialties.map((s, i) => (
                 <span
                   key={i}
-                  className="text-[10px] text-gold tracking-wider border border-gold/25 rounded-full px-3 py-1"
-                  style={{ background: 'rgba(201,168,76,0.05)' }}
+                  className="text-[10px] text-gold tracking-wider border border-gold/20 rounded-full px-3 py-1"
+                  style={{ background: 'rgba(184,150,62,0.05)' }}
                 >
                   {s}
                 </span>
@@ -76,7 +75,7 @@ export default function FortunetellerProfile() {
             <div className="frame-card p-6 sm:p-8 mb-6">
               <div className="space-y-3">
                 {FORTUNE_TELLER.bio.map((line, i) => (
-                  <p key={i} className="text-text/80 text-sm leading-[2]">
+                  <p key={i} className="text-text/70 text-sm leading-[2]">
                     {line}
                   </p>
                 ))}
@@ -99,11 +98,11 @@ export default function FortunetellerProfile() {
 
         {/* Quote in decorative frame - full width */}
         <div className="frame-card corner-ornament p-8 sm:p-10 text-center max-w-2xl mx-auto">
-          <div className="text-gold/30 text-3xl mb-4 font-display">&ldquo;</div>
-          <blockquote className="font-serif text-text/80 text-base sm:text-lg leading-[2] italic mb-4">
+          <div className="text-gold/25 text-3xl mb-4 font-display">&ldquo;</div>
+          <blockquote className="font-serif text-text/70 text-base sm:text-lg leading-[2] italic mb-4">
             {FORTUNE_TELLER.quote}
           </blockquote>
-          <div className="text-gold/30 text-3xl font-display">&rdquo;</div>
+          <div className="text-gold/25 text-3xl font-display">&rdquo;</div>
           <div className="mt-4">
             <span className="text-gold-dim text-xs tracking-wider">── {FORTUNE_TELLER.title}　{FORTUNE_TELLER.name}</span>
           </div>

@@ -6,9 +6,9 @@ export default function LineCTA() {
   if (!lineUrl) return null;
 
   return (
-    <section className="rounded-xl p-6 bg-gradient-to-br from-[#06c755]/20 to-[#06c755]/5 border border-[#06c755]/20">
+    <section className="rounded-xl p-6 bg-gradient-to-br from-[#06c755]/10 to-[#06c755]/5 border border-[#06c755]/20">
       <p className="text-center text-text text-sm mb-4">
-        💚 もっと詳しい鑑定結果をLINEで受け取る
+        もっと詳しい鑑定結果をLINEで受け取る
       </p>
       <a
         href={lineUrl}

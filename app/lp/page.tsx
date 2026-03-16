@@ -75,7 +75,7 @@ export default function LpPage() {
       <FaqSection />
 
       {/* LINE CTA */}
-      <section className="py-16 sm:py-20 px-5 bg-[#07071a]">
+      <section className="py-16 sm:py-20 px-5 bg-celestial-2">
         <div className="max-w-md mx-auto">
           <LineCTA />
         </div>

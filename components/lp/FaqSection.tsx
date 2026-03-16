@@ -22,7 +22,7 @@ export default function FaqSection() {
                 onClick={() => setExpanded(expanded === i ? null : i)}
                 className="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group"
               >
-                <span className="text-text text-sm sm:text-base pr-4 leading-relaxed group-hover:text-gold-bright/80 transition-colors">
+                <span className="text-text text-sm sm:text-base pr-4 leading-relaxed group-hover:text-gold transition-colors">
                   <span className="text-gradient-gold font-serif font-bold mr-3 text-base">Q.</span>
                   {item.q}
                 </span>
@@ -44,7 +44,7 @@ export default function FaqSection() {
                 }}
               >
                 <div className="px-6 pb-5">
-                  <div className="h-px bg-gradient-to-r from-gold/10 via-gold/20 to-gold/10 mb-4" />
+                  <div className="h-px bg-gradient-to-r from-gold/8 via-gold/15 to-gold/8 mb-4" />
                   <p className="text-text-dim text-sm leading-[1.9]">
                     <span className="text-gradient-mystic font-serif font-bold mr-3 text-base">A.</span>
                     {item.a}
