@@ -27,13 +27,13 @@ const cormorant = Cormorant_Garamond({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://koyomi-uranai.com';
 
 export const metadata: Metadata = {
-  title: 'こよみ式 星座×数秘タイプ診断 | 108タイプ無料診断',
+  title: '暦占術 | 星座×数秘で導く108タイプの恋愛診断',
   description:
-    '星座×数秘術であなたの恋愛パターンを108タイプに分類。30秒で無料診断。',
+    '暦占術師・暦（こよみ）が西洋占星術×数秘術で導く108タイプの恋愛診断。あなたの恋愛パターン・相性・運命のパートナーを無料で鑑定。',
   openGraph: {
-    title: 'こよみ式 星座×数秘タイプ診断 | 108タイプ無料診断',
+    title: '暦占術 | 星座×数秘で導く108タイプの恋愛診断',
     description:
-      '星座×数秘術であなたの恋愛パターンを108タイプに分類。30秒で無料診断。',
+      '暦占術師・暦（こよみ）が西洋占星術×数秘術で導く108タイプの恋愛診断。無料で鑑定。',
     images: [`${siteUrl}/ogp-default.jpg`],
     type: 'website',
     locale: 'ja_JP',

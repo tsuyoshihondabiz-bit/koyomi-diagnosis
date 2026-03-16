@@ -2,7 +2,7 @@
 
 import { use, useEffect, useState } from 'react';
 import Link from 'next/link';
-import StarField from '@/components/StarField';
+// StarField removed in redesign
 import ResultCard from '@/components/ResultCard';
 import CompatibilityGrid from '@/components/CompatibilityGrid';
 import ShareButton from '@/components/ShareButton';
@@ -46,8 +46,7 @@ export default function ResultPage({ params }: { params: Promise<{ type: string 
 
   return (
     <>
-      <StarField />
-      <main className="relative z-10 max-w-[640px] mx-auto px-4 py-12">
+      <main className="relative max-w-[640px] mx-auto px-5 py-12 min-h-screen">
         {/* Result header */}
         <header className="text-center mb-8">
           <p className="text-gold-dim text-xs tracking-[0.3em] uppercase mb-2">Your Type</p>

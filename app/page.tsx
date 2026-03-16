@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import StarField from '@/components/StarField';
 import DiagnosisForm from '@/components/DiagnosisForm';
 import LoadingScreen from '@/components/LoadingScreen';
 import Footer from '@/components/Footer';
@@ -19,7 +18,6 @@ export default function HomePage() {
     const numerology = getNumerologyNumber(year, month, day);
     const typeId = `${zodiac.en}-${numerology}`;
 
-    // Store nickname in sessionStorage for result page
     sessionStorage.setItem('koyomi_nickname', nickname);
     sessionStorage.setItem('koyomi_year', String(year));
     sessionStorage.setItem('koyomi_month', String(month));
@@ -32,27 +30,39 @@ export default function HomePage() {
 
   return (
     <>
-      <StarField />
-      <main className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-12">
-        <header className="text-center mb-10">
-          <div
-            className="text-5xl mb-4 inline-block"
-            style={{ animation: 'moonFloat 6s ease-in-out infinite' }}
-          >
-            ☽
-          </div>
-          <h1 className="font-serif text-gold-bright text-2xl sm:text-3xl font-bold mb-3">
-            こよみ。の星座×数秘タイプ診断
-          </h1>
-          <p className="font-display italic text-mystic text-sm tracking-wider">
-            Zodiac × Numerology — 108 Types
-          </p>
-          <span className="inline-block mt-4 px-4 py-1 rounded-full text-xs bg-gold/10 text-gold border border-gold/20">
-            ✦ 完全無料 ✦
-          </span>
-        </header>
+      <main className="relative min-h-screen flex flex-col items-center justify-center px-5 py-16 bg-[#050510]">
+        {/* Subtle ambient light */}
+        <div
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          aria-hidden="true"
+          style={{
+            background:
+              'radial-gradient(ellipse at 50% 40%, rgba(201,168,76,0.2) 0%, transparent 60%)',
+          }}
+        />
 
-        {isLoading ? <LoadingScreen /> : <DiagnosisForm onSubmit={handleSubmit} />}
+        <div className="relative z-10 w-full max-w-sm">
+          <header className="text-center mb-10">
+            <p className="text-gold-dim text-[10px] tracking-[0.4em] uppercase mb-3">
+              Koyomi Fortune Method
+            </p>
+            <h1 className="font-serif text-gold text-xl sm:text-2xl font-bold mb-2 tracking-wide">
+              暦占術
+            </h1>
+            <p className="text-text-dim text-xs tracking-wider">
+              星座×数秘で導く108タイプの恋愛診断
+            </p>
+            <div className="mt-4 h-px max-w-[40px] mx-auto bg-gold/30" />
+          </header>
+
+          <div className="bg-[#0a0a18]/60 border border-white/5 rounded-xl p-6 sm:p-8">
+            {isLoading ? <LoadingScreen /> : <DiagnosisForm onSubmit={handleSubmit} />}
+          </div>
+
+          <p className="text-text-dim/30 text-[10px] text-center mt-6 tracking-wider">
+            完全無料・登録不要
+          </p>
+        </div>
       </main>
       <Footer />
     </>
