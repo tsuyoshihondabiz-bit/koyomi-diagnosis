@@ -26,7 +26,7 @@ export default function HeroSection() {
     sessionStorage.setItem('koyomi_day', String(day));
 
     setTimeout(() => {
-      router.push(`/result/${typeId}`);
+      router.push('/quiz');
     }, 2500);
   };
 

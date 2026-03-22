@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "question": "気になる人からのLINEの返信が遅い時、あなたはどうする？",
+    "emoji": "💌",
+    "options": [
+      {"text": "自分から追いLINEする", "scores": {"passion": 25, "intuition": 5, "embrace": 5, "independence": 5, "empathy": 10}},
+      {"text": "何かあったのかな…と心配になる", "scores": {"passion": 5, "intuition": 10, "embrace": 15, "independence": 5, "empathy": 25}},
+      {"text": "自分の時間を楽しむことにする", "scores": {"passion": 5, "intuition": 5, "embrace": 10, "independence": 25, "empathy": 5}},
+      {"text": "なんとなく相手の状況がわかる気がする", "scores": {"passion": 5, "intuition": 25, "embrace": 10, "independence": 5, "empathy": 15}}
+    ]
+  },
+  {
+    "id": 2,
+    "question": "満月の夜、一番したいことは？",
+    "emoji": "🌕",
+    "options": [
+      {"text": "好きな人に想いを伝える", "scores": {"passion": 25, "intuition": 10, "embrace": 5, "independence": 5, "empathy": 5}},
+      {"text": "月光浴をしながら瞑想する", "scores": {"passion": 5, "intuition": 25, "embrace": 5, "independence": 10, "empathy": 5}},
+      {"text": "大切な人と静かに過ごす", "scores": {"passion": 5, "intuition": 5, "embrace": 25, "independence": 5, "empathy": 15}},
+      {"text": "一人で夜空を眺めながら考え事", "scores": {"passion": 5, "intuition": 15, "embrace": 5, "independence": 25, "empathy": 5}}
+    ]
+  },
+  {
+    "id": 3,
+    "question": "友達が恋愛で悩んでいる時、あなたは？",
+    "emoji": "🤝",
+    "options": [
+      {"text": "「こうすればいいよ！」と具体的にアドバイス", "scores": {"passion": 20, "intuition": 5, "embrace": 5, "independence": 15, "empathy": 5}},
+      {"text": "ただ黙って話を聞いてあげる", "scores": {"passion": 5, "intuition": 5, "embrace": 25, "independence": 5, "empathy": 20}},
+      {"text": "相手の気持ちが手に取るようにわかる", "scores": {"passion": 5, "intuition": 15, "embrace": 5, "independence": 5, "empathy": 25}},
+      {"text": "「自分で答えを見つけて」と背中を押す", "scores": {"passion": 5, "intuition": 5, "embrace": 10, "independence": 25, "empathy": 5}}
+    ]
+  },
+  {
+    "id": 4,
+    "question": "初デートの場所を選ぶなら？",
+    "emoji": "✨",
+    "options": [
+      {"text": "サプライズ満載の特別なプラン", "scores": {"passion": 25, "intuition": 5, "embrace": 10, "independence": 5, "empathy": 5}},
+      {"text": "パワースポットや神社巡り", "scores": {"passion": 5, "intuition": 25, "embrace": 5, "independence": 10, "empathy": 5}},
+      {"text": "相手の好きな場所に合わせる", "scores": {"passion": 5, "intuition": 5, "embrace": 20, "independence": 5, "empathy": 25}},
+      {"text": "カフェで2人だけでゆっくり話す", "scores": {"passion": 10, "intuition": 10, "embrace": 15, "independence": 15, "empathy": 5}}
+    ]
+  },
+  {
+    "id": 5,
+    "question": "恋愛で一番大切にしていることは？",
+    "emoji": "💎",
+    "options": [
+      {"text": "ドキドキする情熱を忘れないこと", "scores": {"passion": 25, "intuition": 5, "embrace": 5, "independence": 10, "empathy": 5}},
+      {"text": "運命を感じる直感を信じること", "scores": {"passion": 5, "intuition": 25, "embrace": 5, "independence": 5, "empathy": 10}},
+      {"text": "相手のすべてを受け入れること", "scores": {"passion": 5, "intuition": 5, "embrace": 25, "independence": 5, "empathy": 15}},
+      {"text": "お互いの自由を尊重すること", "scores": {"passion": 5, "intuition": 5, "embrace": 5, "independence": 25, "empathy": 10}}
+    ]
+  },
+  {
+    "id": 6,
+    "question": "不思議な体験をしたことがある？",
+    "emoji": "🔮",
+    "options": [
+      {"text": "よくある！虫の知らせや予知夢とか", "scores": {"passion": 5, "intuition": 25, "embrace": 5, "independence": 5, "empathy": 15}},
+      {"text": "感情が高ぶると不思議な力を感じる", "scores": {"passion": 20, "intuition": 15, "embrace": 5, "independence": 5, "empathy": 5}},
+      {"text": "人の気持ちが読めすぎて困ることがある", "scores": {"passion": 5, "intuition": 10, "embrace": 5, "independence": 5, "empathy": 25}},
+      {"text": "あまりないけど、自分の信念は強い", "scores": {"passion": 5, "intuition": 5, "embrace": 10, "independence": 25, "empathy": 5}}
+    ]
+  },
+  {
+    "id": 7,
+    "question": "理想のパートナーとの未来は？",
+    "emoji": "🌙",
+    "options": [
+      {"text": "刺激的で冒険に満ちた毎日", "scores": {"passion": 25, "intuition": 5, "embrace": 5, "independence": 10, "empathy": 5}},
+      {"text": "スピリチュアルな繋がりを感じる関係", "scores": {"passion": 5, "intuition": 25, "embrace": 10, "independence": 5, "empathy": 10}},
+      {"text": "温かくて安心できる家庭", "scores": {"passion": 5, "intuition": 5, "embrace": 25, "independence": 5, "empathy": 15}},
+      {"text": "お互い自立しつつ支え合う関係", "scores": {"passion": 5, "intuition": 5, "embrace": 10, "independence": 25, "empathy": 10}}
+    ]
+  }
+]

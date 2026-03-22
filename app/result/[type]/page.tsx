@@ -5,16 +5,21 @@ import Link from 'next/link';
 // StarField removed in redesign
 import ResultCard from '@/components/ResultCard';
 import CompatibilityGrid from '@/components/CompatibilityGrid';
+import RadarChart from '@/components/RadarChart';
+import ScoreBars from '@/components/ScoreBars';
 import ShareButton from '@/components/ShareButton';
 import LineCTA from '@/components/LineCTA';
 import Footer from '@/components/Footer';
 import { getTypeById, getAdviceIndex } from '@/lib/diagnosis';
 import { getLoveLuck } from '@/lib/numerology';
+import type { QuizScores } from '@/lib/quiz-scoring';
+import { getDominantTrait } from '@/lib/quiz-scoring';
 
 export default function ResultPage({ params }: { params: Promise<{ type: string }> }) {
   const { type: typeId } = use(params);
   const [nickname, setNickname] = useState('あなた');
   const [loveLuck, setLoveLuck] = useState(3);
+  const [quizScores, setQuizScores] = useState<QuizScores | null>(null);
 
   useEffect(() => {
     const storedNickname = sessionStorage.getItem('koyomi_nickname');
@@ -24,6 +29,11 @@ export default function ResultPage({ params }: { params: Promise<{ type: string 
     const month = Number(sessionStorage.getItem('koyomi_month') || '3');
     const day = Number(sessionStorage.getItem('koyomi_day') || '14');
     setLoveLuck(getLoveLuck(year, month, day));
+
+    const storedScores = sessionStorage.getItem('koyomi_quiz_scores');
+    if (storedScores) {
+      setQuizScores(JSON.parse(storedScores));
+    }
   }, []);
 
   const diagnosisType = getTypeById(typeId);
@@ -85,6 +95,25 @@ export default function ResultPage({ params }: { params: Promise<{ type: string 
             />
           </ResultCard>
         </div>
+
+        {/* Quiz Score Visualization */}
+        {quizScores && (
+          <div className="space-y-4 mt-4">
+            <ResultCard icon="📊" title="あなたの恋愛力チャート">
+              <RadarChart scores={quizScores} />
+            </ResultCard>
+
+            <ResultCard icon="📈" title="5つの恋愛力スコア">
+              <ScoreBars scores={quizScores} />
+            </ResultCard>
+
+            <div className="text-center py-3">
+              <p className="text-[#e8cc6a] text-base font-[family-name:var(--font-shippori)]">
+                あなたの最強の恋愛力: {getDominantTrait(quizScores).emoji} {getDominantTrait(quizScores).name}
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* LINE CTA */}
         <div className="mt-6">
